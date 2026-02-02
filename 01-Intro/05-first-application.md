@@ -474,3 +474,13 @@ You now understand:
 
 </div>
 
+---
+
+<div style="text-align: center; padding: 20px; color: #666;">
+
+[🏠 Course Home](../README.md) | [📘 Chapter 1 Home](./README.md)
+
+[← Previous: Installation & Setup](./04-installation-setup.md) | [Next Chapter: Node Modules →](../02-Node-Module-System/README.md)
+
+</div>
+

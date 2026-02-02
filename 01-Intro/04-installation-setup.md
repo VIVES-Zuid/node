@@ -360,3 +360,13 @@ Time to create your first Node.js application! 🚀
 
 </div>
 
+---
+
+<div style="text-align: center; padding: 20px; color: #666;">
+
+[🏠 Course Home](../README.md) | [📘 Chapter 1 Home](./README.md)
+
+[← Previous: Node.js Architecture](./03-nodejs-architecture.md) | [Next: First Application →](./05-first-application.md)
+
+</div>
+

@@ -343,3 +343,13 @@ graph LR
 
 Now that you understand the architecture, let's get Node.js **installed and running** on your machine!
 
+---
+
+<div style="text-align: center; padding: 20px; color: #666;">
+
+[🏠 Course Home](../README.md) | [📘 Chapter 1 Home](./README.md)
+
+[← Previous: What is Node.js](./02-what-is-nodejs.md) | [Next: Installation & Setup →](./04-installation-setup.md)
+
+</div>
+

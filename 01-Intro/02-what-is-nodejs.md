@@ -46,7 +46,7 @@ graph LR
 <td style="background-color: #fff3e0; padding: 20px; text-align: center; border-radius: 10px;">
 
 **⚙️ Back-end Service**  
-*(API - Application Programming Interface)*
+_(API - Application Programming Interface)_
 
 </td>
 <td style="background-color: #f3e5f5; padding: 20px; text-align: center; border-radius: 10px;">
@@ -66,19 +66,23 @@ graph LR
 <div style="background-color: #f0f9ff; padding: 25px; border-radius: 10px; border: 2px solid #3b82f6;">
 
 ### 🚀 Highly-scalable Applications
+
 - Handle thousands of concurrent connections
 - Efficient resource usage
 
 ### 📊 Data-intensive Applications
+
 - Real-time data processing
 - High I/O operations
 
 ### ⚡ Real-time Applications
+
 - Chat applications
 - Live notifications
 - Collaborative tools
 
 ### 🏃 Agile Development
+
 - Great for prototyping
 - Rapid development cycles
 
@@ -118,19 +122,20 @@ graph LR
 
 > And many more: Groupon, Mozilla, Aliexpress...
 
-📚 **Sources:** 
+📚 **Sources:**
+
 - [trio.dev/blog/companies-use-node-js](https://trio.dev/blog/companies-use-node-js)
 - [simform.com/blog/companies-using-nodejs](https://www.simform.com/blog/companies-using-nodejs/)
 
 ---
 
-## 📊 StackOverflow Developer Survey 2024
+## 📊 StackOverflow Developer Survey 2025
 
 <div style="background-color: #fff4e6; padding: 20px; border-radius: 10px; border-left: 5px solid #ff9800;">
 
 Node.js consistently ranks as one of the **most popular technologies** among professional developers!
 
-🔗 [See the full survey](https://survey.stackoverflow.co/2023/#most-popular-technologies-webframe)
+🔗 [See the full survey](https://survey.stackoverflow.co/2025/technology/#1-web-frameworks-and-technologies)
 
 </div>
 
@@ -143,6 +148,7 @@ Node.js consistently ranks as one of the **most popular technologies** among pro
 ### Java Spring Application → Node.js Migration
 
 **Results:**
+
 - ✅ Built in **less time** with **fewer developers**
 - 🚀 **35% decrease** in average response time
 - ⚡ **2x faster** page serving
@@ -169,6 +175,7 @@ Node.js consistently ranks as one of the **most popular technologies** among pro
 ### 🎨 JavaScript Everywhere
 
 Use the **same language** for:
+
 - 🎨 Front-end (React, Vue, Angular)
 - ⚙️ Back-end (Node.js)
 - 📱 Mobile (React Native)
@@ -184,3 +191,12 @@ Use the **same language** for:
 
 Now that you understand what Node.js is and why it's powerful, let's explore **how it actually works** under the hood!
 
+---
+
+<div style="text-align: center; padding: 20px; color: #666;">
+
+[🏠 Course Home](../README.md) | [📘 Chapter 1 Home](./README.md)
+
+[← Previous: Course Introduction](./01-course-introduction.md) | [Next: Node.js Architecture →](./03-nodejs-architecture.md)
+
+</div>

@@ -110,3 +110,11 @@ Now that you know the basics, let's dive into **Node.js**!
 
 > 💪 **Remember:** Practice makes perfect. Don't hesitate to ask questions on the forum!
 
+---
+
+<div style="text-align: center; padding: 20px; color: #666;">
+
+[🏠 Course Home](../README.md) | [📘 Chapter 1 Home](./README.md) | [Next: What is Node.js →](./02-what-is-nodejs.md)
+
+</div>
+

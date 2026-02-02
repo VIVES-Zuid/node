@@ -99,12 +99,12 @@ By completing this chapter, you will:
 
 ## ⏱️ Estimated Time
 
-| Activity | Time |
-|----------|------|
-| 📖 Reading | 45 minutes |
-| 💻 Setup & Installation | 30 minutes |
-| 🧪 Lab Exercises | 45 minutes |
-| **Total** | **~2 hours** |
+| Activity                | Time         |
+| ----------------------- | ------------ |
+| 📖 Reading              | 45 minutes   |
+| 💻 Setup & Installation | 30 minutes   |
+| 🧪 Lab Exercises        | 45 minutes   |
+| **Total**               | **~2 hours** |
 
 ---
 
@@ -245,6 +245,7 @@ After completing this chapter, you should be able to answer:
 5. **📧 Email lecturers** - For private matters only
 
 **When asking for help, include:**
+
 - What you're trying to do
 - What you expected to happen
 - What actually happened
@@ -277,6 +278,7 @@ Before moving to Chapter 2, make sure you've:
 ### Chapter 2: Node Modules & npm
 
 Learn how to:
+
 - Work with built-in Node.js modules
 - Create your own modules
 - Use npm to install packages
@@ -310,7 +312,6 @@ Dirk Hostens & Milan Dima
 
 ---
 
-[◀️ Previous: Course Home](../README.md) | [Next: Chapter 2 ▶️](../02-Modules/README.md)
+[🏠 Course Home](../README.md) | [Next: Chapter 2 ▶️](../02-Node-Module-System/README.md)
 
 </div>
-
