@@ -21,11 +21,13 @@ Download the **LTS (Long Term Support)** version for stability
 <div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px;">
 
 **Direct Download:**
+
 ```
-https://nodejs.org/dist/v22.12.0/node-v22.12.0-x64.msi
+https://nodejs.org/dist/v24.13.0/node-v24.13.0-x64.msi
 ```
 
 **Steps:**
+
 1. Download the `.msi` installer
 2. Run the installer
 3. Follow the installation wizard
@@ -44,8 +46,9 @@ https://nodejs.org/dist/v22.12.0/node-v22.12.0-x64.msi
 #### Option 1: Official Installer
 
 **For Intel & Apple Silicon (M1/M2/M3):**
+
 ```
-https://nodejs.org/dist/v22.12.0/node-v22.12.0.pkg
+https://nodejs.org/dist/v24.13.0/node-v24.13.0.pkg
 ```
 
 #### Option 2: Homebrew (Recommended)
@@ -55,6 +58,7 @@ brew install node
 ```
 
 **Advantages of Homebrew:**
+
 - ✅ Easy to update
 - ✅ Manages dependencies
 - ✅ Simple version management
@@ -77,10 +81,11 @@ sudo apt install nodejs npm
 #### Direct Download
 
 ```
-https://nodejs.org/dist/v22.12.0/node-v22.12.0-linux-x64.tar.xz
+https://nodejs.org/dist/v24.13.0/node-v24.13.0-linux-x64.tar.xz
 ```
 
 **Extract and install:**
+
 ```bash
 tar -xf node-v22.12.0-linux-x64.tar.xz
 sudo mv node-v22.12.0-linux-x64 /usr/local/node
@@ -210,13 +215,13 @@ Install these extensions for optimal Node.js development:
 
 #### Must-Have Extensions
 
-| Extension | Purpose |
-|-----------|---------|
-| 📦 **npm intellisense** | Auto-complete npm modules |
-| 🔍 **ESLint** | Code quality and error detection |
-| 🎨 **Prettier** | Code formatting |
-| 🌐 **REST Client** | Test APIs directly in VS Code |
-| 📝 **Document This** | Generate JSDoc comments |
+| Extension               | Purpose                          |
+| ----------------------- | -------------------------------- |
+| 📦 **npm intellisense** | Auto-complete npm modules        |
+| 🔍 **ESLint**           | Code quality and error detection |
+| 🎨 **Prettier**         | Code formatting                  |
+| 🌐 **REST Client**      | Test APIs directly in VS Code    |
+| 📝 **Document This**    | Generate JSDoc comments          |
 
 #### How to Install
 
@@ -260,6 +265,7 @@ F2                    → Rename symbol
 </div>
 
 > 📄 **Full Shortcut Reference:**
+>
 > - Windows: [keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 > - macOS: [keyboard-shortcuts-macos.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
@@ -272,7 +278,7 @@ F2                    → Rename symbol
 ### 🎥 Video Tutorial
 
 **Beginners Series to Node.js - Episode 5**  
-*How to Setup VS Code for Node.js Development*
+_How to Setup VS Code for Node.js Development_
 
 🔗 [Microsoft Docs Video Series](https://docs.microsoft.com/en-us/shows/beginners-series-tonodejs/how-to-setup-vs-code-for-nodejs-development-5-of-26)
 
@@ -302,6 +308,7 @@ F2                    → Rename symbol
 <td style="padding: 15px; background-color: #fff;">
 
 **What you know!**
+
 - From web dev course
 - Dynamic typing
 - Standard ECMAScript
@@ -310,6 +317,7 @@ F2                    → Rename symbol
 <td style="padding: 15px; background-color: #fff;">
 
 **Microsoft's Enhancement**
+
 - Static typing
 - Compile-time checks
 - Used in Angular
@@ -319,6 +327,7 @@ F2                    → Rename symbol
 <td style="padding: 15px; background-color: #fff;">
 
 **Documentation + Types**
+
 - Markup language
 - Type checking via annotations
 - No compilation needed
@@ -354,7 +363,7 @@ Before moving on, make sure you have:
 
 <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 30px; border-radius: 15px; color: white; text-align: center;">
 
-### Your Development Environment is Ready! 
+### Your Development Environment is Ready!
 
 Time to create your first Node.js application! 🚀
 
@@ -369,4 +378,3 @@ Time to create your first Node.js application! 🚀
 [← Previous: Node.js Architecture](./03-nodejs-architecture.md) | [Next: First Application →](./05-first-application.md)
 
 </div>
-
