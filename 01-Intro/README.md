@@ -275,14 +275,14 @@ Before moving to Chapter 2, make sure you've:
 
 <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 30px; border-radius: 15px; color: white; text-align: center;">
 
-### Chapter 2: Node Modules & npm
+### Chapter 2: Node Module System
 
 Learn how to:
-
+- Understand global objects vs modules
 - Work with built-in Node.js modules
 - Create your own modules
-- Use npm to install packages
-- Manage project dependencies
+- Use EventEmitter for event-driven code
+- Build HTTP servers
 
 **Ready?** Let's keep going! 🚀
 

@@ -48,12 +48,20 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #f3e5f5; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Understanding Modules
-- Built-in Modules
+- Global Objects
+- Module System Basics
 - Creating Custom Modules
-- Module Patterns
+- Built-in Modules
+- Events & EventEmitter
+- HTTP Module
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - Global Objects](./02-Node-Module-System/01-global-objects.md)
+- [02 - Module System Basics](./02-Node-Module-System/02-module-system.md)
+- [03 - Creating Custom Modules](./02-Node-Module-System/03-creating-modules.md)
+- [04 - Built-in Modules](./02-Node-Module-System/04-builtin-modules.md)
+- [05 - Events & EventEmitter](./02-Node-Module-System/05-events.md)
+- [06 - HTTP Module](./02-Node-Module-System/06-http-module.md)
 
 </div>
 
