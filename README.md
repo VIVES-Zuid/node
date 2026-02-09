@@ -255,6 +255,28 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 
 </div>
 
+---
+
+### 🚨 [Chapter 11: Error Handling](./11-Error-Handling/01-introduction.md)
+
+<div style="background-color: #ffebee; padding: 20px; border-radius: 10px;">
+
+**Topics:**
+- Synchronous vs Asynchronous Error Handling
+- Try-Catch Blocks
+- Custom Error Classes
+- Express Error Middleware
+- Production Best Practices
+
+**Slides:**
+- [01 - Introduction](./11-Error-Handling/01-introduction.md)
+- [02 - Synchronous Error Handling](./11-Error-Handling/02-synchronous-errors.md)
+- [03 - Asynchronous Error Handling](./11-Error-Handling/03-async-errors.md)
+- [04 - Express Error Middleware](./11-Error-Handling/04-express-errors.md)
+- [05 - Best Practices](./11-Error-Handling/05-best-practices.md)
+
+</div>
+
 </div>
 
 ---
@@ -272,6 +294,7 @@ graph TD
     G --> H[8. Validation]
     H --> I[9. Modeling]
     I --> J[10. Auth]
+    J --> K[11. Error Handling]
     style A fill:#4caf50,stroke:#2e7d32,color:#fff
 ```
 
@@ -401,6 +424,9 @@ See **Toledo** for detailed grading criteria and project requirements.
 
 ### Latest Changes
 
+- **2026-02-09**: Chapter 11 (Error Handling) created with best practices
+- **2026-02-09**: Chapter 10 (Authentication & Authorization) converted to markdown format
+- **2026-02-09**: Chapter 9 (Mongoose Modeling) converted to markdown format
 - **2026-02-09**: Chapter 8 (Data Validation) converted to markdown format
 - **2026-02-09**: Chapter 7 (MongoDB) converted to markdown format
 - **2026-02-09**: Chapter 6 (Async JS) converted to markdown format
