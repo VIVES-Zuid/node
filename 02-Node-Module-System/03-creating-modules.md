@@ -11,11 +11,11 @@ Let's create a simple logging module.
 **Create `logger.js`:**
 
 ```javascript
-var url = 'http://mijnlogger.io/log';
+var url = "http://mylogger.io/log";
 
 function log(message) {
-    // Send HTTP request (simplified)
-    console.log(message);
+  // Send HTTP request (simplified)
+  console.log(message);
 }
 ```
 
@@ -36,10 +36,10 @@ To use the `log` function in other files, we must **export** it:
 **In `logger.js`:**
 
 ```javascript
-var url = 'http://mijnlogger.io/log';
+var url = "http://mylogger.io/log";
 
 function log(message) {
-    console.log(message);
+  console.log(message);
 }
 
 // Export the log function
@@ -59,7 +59,7 @@ module.exports.log = log;
 ```javascript
 // ❌ BAD: Exporting implementation details
 module.exports.log = log;
-module.exports.logurl = url;  // URL is an implementation detail!
+module.exports.logurl = url; // URL is an implementation detail!
 ```
 
 ```javascript
@@ -88,10 +88,10 @@ module.exports.log = log;
 
 ```javascript
 // Load the module (without assignment)
-require('./logger');
+require("./logger");
 
 // Better: Assign to a variable
-var logger = require('./logger');
+var logger = require("./logger");
 console.log(logger);
 ```
 
@@ -99,7 +99,7 @@ console.log(logger);
 
 ```bash
 milan@les2〽 node app.js
-{ log: [Function: log], logurl: 'http://mijnlogger.io:log' }
+{ log: [Function: log], logurl: 'http://mylogger.io:log' }
 milan@les2〽
 ```
 
@@ -118,8 +118,8 @@ milan@les2〽
 ### Calling the Log Function
 
 ```javascript
-const logger = require('./logger');
-logger.log('message');
+const logger = require("./logger");
+logger.log("message");
 ```
 
 **Output:**
@@ -141,9 +141,9 @@ milan@les2〽
 ### The Problem with `var`
 
 ```javascript
-var logger = require('./logger');
-logger = 1;  // ⚠️ Oops! Accidentally reassigned
-logger.log('message');  // 💥 TypeError!
+var logger = require("./logger");
+logger = 1; // ⚠️ Oops! Accidentally reassigned
+logger.log("message"); // 💥 TypeError!
 ```
 
 **Result:**
@@ -155,9 +155,9 @@ TypeError: logger.log is not a function
 ### The Solution: Use `const`
 
 ```javascript
-const logger = require('./logger');
-logger = 1;  // ❌ Error at compile time, not runtime!
-logger.log('message');
+const logger = require("./logger");
+logger = 1; // ❌ Error at compile time, not runtime!
+logger.log("message");
 ```
 
 ### Best Practice
@@ -183,10 +183,10 @@ Instead of exporting an object with a function, export the function directly:
 **In `logger.js`:**
 
 ```javascript
-var url = 'http://mijnlogger.io:log';
+var url = "http://mylogger.io:log";
 
 function log(message) {
-    console.log(message);
+  console.log(message);
 }
 
 // Export the function directly
@@ -196,8 +196,8 @@ module.exports = log;
 **In `app.js`:**
 
 ```javascript
-const log = require('./logger');
-log('message');  // Cleaner!
+const log = require("./logger");
+log("message"); // Cleaner!
 ```
 
 ### Benefits
@@ -226,15 +226,15 @@ Rename `logger.log` to just `log`:
 **Before:**
 
 ```javascript
-const logger = require('./logger');
-logger.log('message');
+const logger = require("./logger");
+logger.log("message");
 ```
 
 **After:**
 
 ```javascript
-const log = require('./logger');
-log('message');
+const log = require("./logger");
+log("message");
 ```
 
 </div>
@@ -250,9 +250,9 @@ log('message');
 Remember the module wrapper function?
 
 ```javascript
-(function(exports, require, module, __filename, __dirname) {
-    // Your code
-})
+(function (exports, require, module, __filename, __dirname) {
+  // Your code
+});
 ```
 
 `exports` is a **reference** to `module.exports`!
@@ -262,13 +262,13 @@ Remember the module wrapper function?
 ```javascript
 module.exports.log = log;
 // OR
-exports.log = log;  // Same thing!
+exports.log = log; // Same thing!
 ```
 
 ### This Does NOT Work ❌
 
 ```javascript
-exports = log;  // ❌ Breaks the reference!
+exports = log; // ❌ Breaks the reference!
 ```
 
 ### Why?
@@ -287,8 +287,12 @@ exports = log;  // ❌ Breaks the reference!
 
 ```javascript
 // logger.js
-function log(message) { console.log(message); }
-function error(message) { console.error(message); }
+function log(message) {
+  console.log(message);
+}
+function error(message) {
+  console.error(message);
+}
 
 module.exports.log = log;
 module.exports.error = error;
@@ -301,9 +305,9 @@ exports.error = error;
 **Usage:**
 
 ```javascript
-const logger = require('./logger');
-logger.log('Info');
-logger.error('Error!');
+const logger = require("./logger");
+logger.log("Info");
+logger.error("Error!");
 ```
 
 ---
@@ -312,7 +316,9 @@ logger.error('Error!');
 
 ```javascript
 // logger.js
-function log(message) { console.log(message); }
+function log(message) {
+  console.log(message);
+}
 
 module.exports = log;
 ```
@@ -320,8 +326,8 @@ module.exports = log;
 **Usage:**
 
 ```javascript
-const log = require('./logger');
-log('Message');
+const log = require("./logger");
+log("Message");
 ```
 
 ---
@@ -331,8 +337,12 @@ log('Message');
 ```javascript
 // logger.js
 class Logger {
-    log(message) { console.log(message); }
-    error(message) { console.error(message); }
+  log(message) {
+    console.log(message);
+  }
+  error(message) {
+    console.error(message);
+  }
 }
 
 module.exports = Logger;
@@ -341,9 +351,9 @@ module.exports = Logger;
 **Usage:**
 
 ```javascript
-const Logger = require('./logger');
+const Logger = require("./logger");
 const logger = new Logger();
-logger.log('Message');
+logger.log("Message");
 ```
 
 </div>
@@ -369,6 +379,7 @@ jshint app.js
 ```
 
 JSHint will catch common mistakes like:
+
 - Using `var` instead of `const`
 - Undefined variables
 - Unused variables

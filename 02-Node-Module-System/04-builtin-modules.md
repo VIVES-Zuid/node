@@ -18,7 +18,7 @@ No installation required!
 
 ### Official Docs
 
-- 📘 [Node.js v18.x API](https://nodejs.org/dist/latest-v18.x/docs/api/)
+- 📘 [Node.js v25.x API](https://nodejs.org/dist/latest-v25.x/docs/api/)
 - 📘 [Node.js Latest API](https://nodejs.org/docs/latest/api/)
 
 **Note:** Not everything is a module! Some are objects like `Console`.
@@ -69,7 +69,7 @@ No installation required!
 ### Working with File Paths
 
 ```javascript
-const path = require('path');  // No ./ for built-in modules!
+const path = require("path"); // No ./ for built-in modules!
 
 const pathObj = path.parse(__filename);
 console.log(pathObj);
@@ -90,11 +90,11 @@ console.log(pathObj);
 ### Common Path Methods
 
 ```javascript
-path.join('/users', 'milan', 'file.txt');    // Join paths
-path.resolve('file.txt');                     // Absolute path
-path.basename('/users/milan/file.txt');      // 'file.txt'
-path.dirname('/users/milan/file.txt');       // '/users/milan'
-path.extname('/users/milan/file.txt');       // '.txt'
+path.join("/users", "milan", "file.txt"); // Join paths
+path.resolve("file.txt"); // Absolute path
+path.basename("/users/milan/file.txt"); // 'file.txt'
+path.dirname("/users/milan/file.txt"); // '/users/milan'
+path.extname("/users/milan/file.txt"); // '.txt'
 ```
 
 </div>
@@ -112,7 +112,7 @@ path.extname('/users/milan/file.txt');       // '.txt'
 ⚠️ **Only works in Node.js, not in browsers!**
 
 ```javascript
-const os = require('os');
+const os = require("os");
 
 const totalMemory = os.totalmem();
 const freeMemory = os.freemem();
@@ -139,7 +139,7 @@ milan@les2〽
 
 ```javascript
 // Old way
-console.log('OS type is: ' + osType);
+console.log("OS type is: " + osType);
 
 // ES6 way (template literal)
 console.log(`OS type is: ${osType}`);
@@ -181,8 +181,8 @@ The File System module has two versions of most methods:
 ### Synchronous Example (Don't Use!)
 
 ```javascript
-const fs = require('fs');
-const files = fs.readdirSync('./');
+const fs = require("fs");
+const files = fs.readdirSync("./");
 console.log(files);
 ```
 
@@ -203,14 +203,14 @@ console.log(files);
 ### Asynchronous Example
 
 ```javascript
-const fs = require('fs');
+const fs = require("fs");
 
-fs.readdir('./', function(err, files) {
-    if (err) {
-        console.log('Error', err);
-    } else {
-        console.log('Result', files);
-    }
+fs.readdir("./", function (err, files) {
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Result", files);
+  }
 });
 ```
 

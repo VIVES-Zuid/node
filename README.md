@@ -140,12 +140,17 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #e1f5fe; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Callbacks
+- Synchronous vs Asynchronous
+- Callbacks & Callback Hell
 - Promises
 - Async/Await
-- Error Handling
+- Parallel Execution
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - Sync vs Async](./06-Async-JS/01-sync-vs-async.md)
+- [02 - Callbacks](./06-Async-JS/02-callbacks.md)
+- [03 - Promises](./06-Async-JS/03-promises.md)
+- [04 - Async/Await](./06-Async-JS/04-async-await.md)
 
 </div>
 
