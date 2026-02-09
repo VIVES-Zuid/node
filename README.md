@@ -72,12 +72,20 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Introduction to npm
-- Installing Packages
-- package.json
+- What is npm?
+- package.json Configuration
+- Installing & Using Packages
 - Semantic Versioning
+- Managing Dependencies
+- Publishing Packages
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - What is NPM?](./03-Node-NPM/01-what-is-npm.md)
+- [02 - package.json](./03-Node-NPM/02-package-json.md)
+- [03 - Installing Packages](./03-Node-NPM/03-installing-packages.md)
+- [04 - Semantic Versioning](./03-Node-NPM/04-semantic-versioning.md)
+- [05 - Managing Dependencies](./03-Node-NPM/05-managing-dependencies.md)
+- [06 - Publishing Packages](./03-Node-NPM/06-publishing-packages.md)
 
 </div>
 
@@ -88,28 +96,40 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Express Framework
-- RESTful APIs
-- Routing
-- Request/Response
+- RESTful API Principles
+- Express.js Framework
+- GET, POST, PUT, DELETE Requests
+- Route Parameters & Validation
+- Using Postman & nodemon
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - REST & Express](./04-Express-API/01-rest-and-express.md)
+- [02 - GET Requests](./04-Express-API/02-get-requests.md)
+- [03 - POST Requests](./04-Express-API/03-post-requests.md)
+- [04 - PUT & DELETE Requests](./04-Express-API/04-put-delete-requests.md)
+- [05 - Tools & Best Practices](./04-Express-API/05-tools-best-practices.md)
 
 </div>
 
 ---
 
-### 📔 [Chapter 5: Middleware](./05-Middleware/README.md)
+### 📔 [Chapter 5: Middleware Functions](./05-Middleware/README.md)
 
 <div style="background-color: #fce4ec; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Understanding Middleware
+- Middleware Concepts & Pipeline
 - Built-in Middleware
-- Custom Middleware
-- Error Handling
+- Third-party Middleware (helmet, morgan)
+- Environments & Configuration
+- Templating & Project Structure
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - Middleware Basics](./05-Middleware/01-middleware-basics.md)
+- [02 - Built-in Middleware](./05-Middleware/02-builtin-middleware.md)
+- [03 - Third-party Middleware](./05-Middleware/03-third-party-middleware.md)
+- [04 - Environments & Config](./05-Middleware/04-environments-config.md)
+- [05 - Templating & Structure](./05-Middleware/05-templating-structure.md)
 
 </div>
 
