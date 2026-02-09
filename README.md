@@ -277,6 +277,32 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 
 </div>
 
+---
+
+### 🧪 [Chapter 12: Testing with Node.js](./12-Testing/01-introduction.md)
+
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px;">
+
+**Topics:**
+- Node.js Built-in Test Runner
+- Writing Unit & Integration Tests
+- Assertions & Mocking
+- Asynchronous Testing
+- Code Coverage
+- Testing Best Practices
+
+**Slides:**
+- [01 - Introduction to Testing](./12-Testing/01-introduction.md)
+- [02 - Writing Your First Test](./12-Testing/02-first-test.md)
+- [03 - Assertions](./12-Testing/03-assertions.md)
+- [04 - Async Testing](./12-Testing/04-async-testing.md)
+- [05 - Mocking and Spies](./12-Testing/05-mocking.md)
+- [06 - Code Coverage](./12-Testing/06-coverage.md)
+- [07 - Best Practices](./12-Testing/07-best-practices.md)
+- [08 - Lab Exercise](./12-Testing/08-lab.md)
+
+</div>
+
 </div>
 
 ---
@@ -295,6 +321,7 @@ graph TD
     H --> I[9. Modeling]
     I --> J[10. Auth]
     J --> K[11. Error Handling]
+    K --> L[12. Testing]
     style A fill:#4caf50,stroke:#2e7d32,color:#fff
 ```
 
@@ -424,6 +451,7 @@ See **Toledo** for detailed grading criteria and project requirements.
 
 ### Latest Changes
 
+- **2026-02-09**: Chapter 12 (Testing) created with Node.js test runner
 - **2026-02-09**: Chapter 11 (Error Handling) created with best practices
 - **2026-02-09**: Chapter 10 (Authentication & Authorization) converted to markdown format
 - **2026-02-09**: Chapter 9 (Mongoose Modeling) converted to markdown format
