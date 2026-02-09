@@ -236,12 +236,22 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #fbe9e7; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- User Authentication
-- JWT Tokens
-- Password Hashing
-- Role-Based Access
+- JWT Authentication
+- Auth Middleware
+- Role-Based Authorization
+- Admin Privileges
+- Secure Logout
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - Introduction](./10-Auth-And-Auth/01-intro.md)
+- [02 - Auth Middleware](./10-Auth-And-Auth/02-auth-middleware.md)
+- [03 - Protecting Routes](./10-Auth-And-Auth/03-protecting-routes.md)
+- [04 - Getting Current User](./10-Auth-And-Auth/04-current-user.md)
+- [05 - User Logout](./10-Auth-And-Auth/05-user-logout.md)
+- [06 - Role-Based Authorization](./10-Auth-And-Auth/06-role-based-auth.md)
+- [07 - Admin Middleware](./10-Auth-And-Auth/07-admin-middleware.md)
+- [08 - Applying Admin Middleware](./10-Auth-And-Auth/08-applying-admin.md)
+- [09 - Summary](./10-Auth-And-Auth/09-summary.md)
 
 </div>
 
