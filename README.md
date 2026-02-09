@@ -211,12 +211,21 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #ede7f6; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Advanced Schemas
-- Relationships
-- Virtuals & Methods
-- Query Optimization
+- Referencing vs Embedding
+- Hybrid Approaches
+- Subdocuments & Arrays
+- Transactions
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - Introduction to Modeling](./09-Mongoose-Modeling/01-intro.md)
+- [02 - Referencing vs Embedding](./09-Mongoose-Modeling/02-referencing-embedding.md)
+- [03 - Hybrid Approach](./09-Mongoose-Modeling/03-hybrid-approach.md)
+- [04 - Referencing Documents](./09-Mongoose-Modeling/04-referencing-documents.md)
+- [05 - Embedding Documents](./09-Mongoose-Modeling/05-embedding-documents.md)
+- [06 - Arrays of Subdocuments](./09-Mongoose-Modeling/06-arrays-subdocuments.md)
+- [07 - MongoDB ObjectIDs](./09-Mongoose-Modeling/07-objectids.md)
+- [08 - Transactions](./09-Mongoose-Modeling/08-transactions.md)
+- [09 - Lab & Assignment](./09-Mongoose-Modeling/09-lab.md)
 
 </div>
 
