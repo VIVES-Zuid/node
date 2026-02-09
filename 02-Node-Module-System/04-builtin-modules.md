@@ -99,7 +99,7 @@ path.extname("/users/milan/file.txt"); // '.txt'
 
 </div>
 
-> 📖 [Path Module Docs](https://nodejs.org/dist/latest-v18.x/docs/api/path.html#pathparsepath)
+> 📖 [Path Module Docs](https://nodejs.org/dist/latest-v25.x/docs/api/path.html#pathparsepath)
 
 ---
 
@@ -147,7 +147,7 @@ console.log(`OS type is: ${osType}`);
 
 </div>
 
-> 📖 [OS Module Docs](https://nodejs.org/dist/latest-v18.x/docs/api/os.html)
+> 📖 [OS Module Docs](https://nodejs.org/dist/latest-v25.x/docs/api/os.html)
 
 ---
 
@@ -217,7 +217,7 @@ fs.readdir("./", function (err, files) {
 ### How It Works
 
 1. **Two parameters:** Path and callback function
-2. **Callback has two parameters:** `err` and result
+2. **Callback has two parameters:** `err` and `result`
 3. **Only one contains data:** Either error OR result (not both)
 
 **Output:**
@@ -230,7 +230,7 @@ milan@les2〽
 
 </div>
 
-> 📖 [File System Docs](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html)
+> 📖 [File System Docs](https://nodejs.org/dist/latest-v25.x/docs/api/fs.html)
 
 ---
 
