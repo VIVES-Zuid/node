@@ -179,17 +179,28 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 
 ---
 
-### 📖 [Chapter 8: Data Validation](./08-Data-Validation/README.md)
+### 📖 [Chapter 8: Data Validation](./08-Data-Validation/01-introduction.md)
 
 <div style="background-color: #fff9c4; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Input Validation
-- Joi Library
+- Mongoose Validation
+- Built-in Validators
 - Custom Validators
-- Error Messages
+- Adding Persistence to APIs
+- Refactoring CRUD Operations
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - Introduction](./08-Data-Validation/01-introduction.md)
+- [02 - Validation in Mongoose](./08-Data-Validation/02-validation-mongoose.md)
+- [03 - Custom Validators](./08-Data-Validation/03-custom-validators.md)
+- [04 - Adding Persistence](./08-Data-Validation/04-adding-persistence.md)
+- [05 - Refactoring GET](./08-Data-Validation/05-refactoring-get.md)
+- [06 - Refactoring POST](./08-Data-Validation/06-refactoring-post.md)
+- [07 - Refactoring PUT](./08-Data-Validation/07-refactoring-put.md)
+- [08 - Refactoring DELETE](./08-Data-Validation/08-refactoring-delete.md)
+- [09 - Testing](./08-Data-Validation/09-testing.md)
+- [10 - Lab Assignment](./08-Data-Validation/10-lab.md)
 
 </div>
 
@@ -371,8 +382,14 @@ See **Toledo** for detailed grading criteria and project requirements.
 
 ### Latest Changes
 
-- **2026-02-02**: Chapter 1 converted to markdown format
-- More chapters coming soon...
+- **2026-02-09**: Chapter 8 (Data Validation) converted to markdown format
+- **2026-02-09**: Chapter 7 (MongoDB) converted to markdown format
+- **2026-02-09**: Chapter 6 (Async JS) converted to markdown format
+- **2026-02-09**: Chapter 5 (Middleware) converted to markdown format
+- **2026-02-09**: Chapter 4 (Express API) converted to markdown format
+- **2026-02-09**: Chapter 3 (NPM) converted to markdown format
+- **2026-02-09**: Chapter 2 (Module System) converted to markdown format
+- **2026-02-02**: Chapter 1 (Intro) converted to markdown format
 
 </div>
 
