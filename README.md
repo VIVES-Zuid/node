@@ -161,12 +161,19 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 <div style="background-color: #f1f8e9; padding: 20px; border-radius: 10px;">
 
 **Topics:**
-- Introduction to MongoDB
-- CRUD Operations
-- Mongoose ODM
-- Schema Design
+- MongoDB Setup & Connection
+- Schemas & Models
+- CRUD Operations (Create, Read, Update, Delete)
+- Querying & Filtering
+- Pagination & Sorting
 
-**Status:** 🚧 Coming Soon
+**Slides:**
+- [01 - MongoDB Setup](./07-MongoDB/01-mongodb-setup.md)
+- [02 - Schemas & Models](./07-MongoDB/02-schemas-models.md)
+- [03 - Creating Documents](./07-MongoDB/03-creating-documents.md)
+- [04 - Reading Documents](./07-MongoDB/04-reading-documents.md)
+- [05 - Updating Documents](./07-MongoDB/05-updating-documents.md)
+- [06 - Deleting Documents](./07-MongoDB/06-deleting-documents.md)
 
 </div>
 
