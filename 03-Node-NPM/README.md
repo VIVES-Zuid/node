@@ -14,7 +14,7 @@ Learn to use and publish packages with npm
 
 ## 🤔 What You'll Learn
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #333;">
 
 This chapter covers:
 
@@ -31,7 +31,7 @@ This chapter covers:
 
 ## 📚 Registry Stats
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### npm Registry Growth
 
@@ -49,7 +49,7 @@ All **free and open-source** building blocks for your applications!
 
 ## 🗂️ Chapter Slides
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #333;">
 
 1. **[What is NPM?](./01-what-is-npm.md)** - Introduction to npm
 2. **[package.json](./02-package-json.md)** - Project configuration file
@@ -65,7 +65,7 @@ All **free and open-source** building blocks for your applications!
 ## 💡 Key Concepts
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #333;">
 <th style="padding: 15px;">Concept</th>
 <th style="padding: 15px;">Description</th>
 </tr>
@@ -73,7 +73,7 @@ All **free and open-source** building blocks for your applications!
 <td style="padding: 15px;"><strong>npm</strong></td>
 <td style="padding: 15px;">Node Package Manager - both CLI tool and registry</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><strong>package.json</strong></td>
 <td style="padding: 15px;">Configuration file for your Node project</td>
 </tr>
@@ -81,7 +81,7 @@ All **free and open-source** building blocks for your applications!
 <td style="padding: 15px;"><strong>Dependencies</strong></td>
 <td style="padding: 15px;">Libraries your application needs to run</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><strong>DevDependencies</strong></td>
 <td style="padding: 15px;">Tools needed only during development</td>
 </tr>
@@ -89,7 +89,7 @@ All **free and open-source** building blocks for your applications!
 <td style="padding: 15px;"><strong>SemVer</strong></td>
 <td style="padding: 15px;">Semantic Versioning (Major.Minor.Patch)</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><strong>node_modules</strong></td>
 <td style="padding: 15px;">Folder containing all installed packages</td>
 </tr>
@@ -101,7 +101,7 @@ All **free and open-source** building blocks for your applications!
 
 By the end of this chapter, you will:
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; color: #333;">
 
 ✅ Understand what npm is and why it's important  
 ✅ Create and configure package.json files  
@@ -127,7 +127,7 @@ Ready to explore the npm ecosystem?
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [← Previous: Chapter 2](../02-Node-Module-System/README.md) | [Next Chapter: Express →](../04-Express-API/README.md)
 

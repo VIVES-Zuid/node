@@ -14,7 +14,7 @@ A standard architectural style for building web services
 
 ## 📖 RESTful Services
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Key Principles
 
@@ -40,7 +40,7 @@ A standard architectural style for building web services
 ## 🔑 HTTP Methods (CRUD Operations)
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #000;">
 <th style="padding: 15px;">HTTP Method</th>
 <th style="padding: 15px;">CRUD</th>
 <th style="padding: 15px;">Operation</th>
@@ -52,7 +52,7 @@ A standard architectural style for building web services
 <td style="padding: 15px;">Retrieve data</td>
 <td style="padding: 15px;">GET /api/courses</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>POST</strong></td>
 <td style="padding: 15px;">Create</td>
 <td style="padding: 15px;">Add new resource</td>
@@ -64,7 +64,7 @@ A standard architectural style for building web services
 <td style="padding: 15px;">Update entire resource</td>
 <td style="padding: 15px;">PUT /api/courses/1</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>PATCH</strong></td>
 <td style="padding: 15px;">Update</td>
 <td style="padding: 15px;">Partial update</td>
@@ -82,7 +82,7 @@ A standard architectural style for building web services
 
 ## ⚡ What is Express?
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Fast, Minimalist Web Framework
 
@@ -108,7 +108,7 @@ Express is the most popular web framework for Node.js:
 
 ## 📦 Installing Express
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Create a New Project
 
@@ -140,7 +140,7 @@ npm i express
 
 ## 🏗️ First Express Application
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Create index.js
 
@@ -178,7 +178,7 @@ Open browser: `http://localhost:3000/`
 
 ## 🔍 Understanding the Code
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Line by Line
 
@@ -210,9 +210,68 @@ Start server on port 3000
 
 ---
 
+## 📨 Request & Response Objects
+
+<div style="background: linear-gradient(135deg, #ff9a56 0%, #ff5e62 100%); padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; color: white;">
+
+<div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; backdrop-filter: blur(10px);">
+
+### 📥 Request (req)
+
+**Contains information from the client:**
+
+- 🌐 **req.params** - Route parameters  
+  `/api/users/:id` → `req.params.id`
+
+- 🔍 **req.query** - Query strings  
+  `/search?q=node` → `req.query.q`
+
+- 📦 **req.body** - Request body (POST data)  
+  `{ "name": "John" }`
+
+- 🏷️ **req.headers** - HTTP headers  
+  `Content-Type`, `Authorization`
+
+</div>
+
+<div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; backdrop-filter: blur(10px);">
+
+### 📤 Response (res)
+
+**Methods to send data back to client:**
+
+- ✉️ **res.send()** - Send any type  
+  `res.send('Hello')` or `res.send({ name: 'John' })`
+
+- 📋 **res.json()** - Send JSON explicitly  
+  `res.json({ success: true })`
+
+- 🔢 **res.status()** - Set status code  
+  `res.status(404).send('Not Found')`
+
+- 🔗 **res.redirect()** - Redirect to URL  
+  `res.redirect('/home')`
+
+</div>
+
+</div>
+
+<div style="text-align: center; margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.2); border-radius: 10px; color: white;">
+
+**Every route handler receives these two objects:**  
+`app.get('/path', (req, res) => { ... })`
+
+</div>
+
+</div>
+
+---
+
 ## 🛣️ Creating API Endpoints
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Example: Courses API
 
@@ -246,7 +305,7 @@ app.listen(3000, () => {
 
 ## 🎨 Response Types
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Different Ways to Respond
 
@@ -278,7 +337,7 @@ Express automatically sets the correct `Content-Type` header!
 
 ## 🔄 No More If Blocks!
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #000;">
 
 ### Before Express (Raw Node.js)
 
@@ -315,7 +374,7 @@ app.get('/api/courses', (req, res) => {
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #000;">
 
 ### REST & Express Basics
 

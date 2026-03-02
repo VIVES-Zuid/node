@@ -14,7 +14,7 @@ Learn to manage your project's dependencies
 
 ## 📁 node_modules Directory
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### History: The Nested Nightmare
 
@@ -36,7 +36,7 @@ Learn to manage your project's dependencies
 
 ## 🔍 Checking for Updates
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### npm outdated
 
@@ -50,8 +50,8 @@ milan@npm-demo〽 npm outdated
 
 ```
 Package     Current  Wanted   Latest   Location
-mongoose    2.4.2    2.9.10   5.11.17  node_modules/mongoose
-underscore  1.4.0    1.12.0   1.12.0   node_modules/underscore
+mongoose    7.6.3    7.8.6    9.2.1    node_modules/mongoose
+underscore  1.12.0   1.13.8   1.13.8   node_modules/underscore
 ```
 
 | Column | Meaning |
@@ -67,7 +67,7 @@ underscore  1.4.0    1.12.0   1.12.0   node_modules/underscore
 
 ## 🔄 Updating Packages
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### npm update
 
@@ -84,10 +84,10 @@ milan@npm-demo〽 npm update
 ```bash
 milan@npm-demo〽 npm outdated
 Package     Current  Wanted   Latest   Location
-mongoose    2.9.10   2.9.10   5.11.17  node_modules/mongoose
+mongoose    7.8.6    7.8.6    9.2.1    node_modules/mongoose
 ```
 
-Notice: **Major** version (5.x.x) not installed automatically!
+Notice: **Major** version (9.x.x) not installed automatically!
 
 </div>
 
@@ -95,7 +95,7 @@ Notice: **Major** version (5.x.x) not installed automatically!
 
 ## ⬆️ Upgrading to Latest Version
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #333;">
 
 ### Install Specific Version
 
@@ -106,7 +106,7 @@ For major version updates, install explicitly:
 milan@npm-demo〽 npm i mongoose@latest
 
 # Or specific version
-milan@npm-demo〽 npm i mongoose@5.11.17
+milan@npm-demo〽 npm i mongoose@9.2.1
 
 added 34 packages, removed 2 packages, changed 2 packages
 ```
@@ -116,7 +116,7 @@ added 34 packages, removed 2 packages, changed 2 packages
 ```json
 {
   "dependencies": {
-    "mongoose": "^5.11.17"  // Updated!
+    "mongoose": "^9.2.1"  // Updated!
   }
 }
 ```
@@ -127,14 +127,14 @@ added 34 packages, removed 2 packages, changed 2 packages
 
 ## ⬇️ Downgrading Packages
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Install Older Version
 
 Sometimes you need an older version:
 
 ```bash
-milan@npm-demo〽 npm i mongoose@2.4.2
+milan@npm-demo〽 npm i mongoose@7.6.3
 
 removed 34 packages, added 2 packages, changed 2 packages
 ```
@@ -155,14 +155,14 @@ removed 34 packages, added 2 packages, changed 2 packages
 ### Practice Exercise
 
 1. Check your current underscore version
-2. Downgrade to version 1.4.0
+2. Downgrade to version 1.12.0
 3. Verify the installed version
 4. Check package.json
 5. Try `npm outdated` again
 
 **Command:**
 ```bash
-npm i underscore@1.4.0
+npm i underscore@1.12.0
 ```
 
 </div>
@@ -171,7 +171,7 @@ npm i underscore@1.4.0
 
 ## 🗑️ Uninstalling Packages
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### npm uninstall
 
@@ -197,7 +197,7 @@ removed 4 packages, and audited 33 packages in 2s
 
 ## 🌍 Global vs Local Packages
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Global Packages
 
@@ -232,7 +232,7 @@ npm un -g package-name
 
 ## 🔒 Dev Dependencies
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Development-Only Dependencies
 
@@ -250,7 +250,7 @@ added 31 packages, and audited 37 packages in 4s
 ```json
 {
   "devDependencies": {
-    "jshint": "^2.12.0"
+    "jshint": "^2.13.6"
   }
 }
 ```
@@ -267,7 +267,7 @@ added 31 packages, and audited 37 packages in 4s
 
 ## 🚫 Git and node_modules
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #333;">
 
 ### ⚠️ Never Commit node_modules!
 
@@ -301,7 +301,7 @@ This reads package.json and installs everything!
 ## 💡 Useful npm Commands
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e3f2fd;">
+<tr style="background-color: #e3f2fd; color: #333;">
 <th style="padding: 15px;">Command</th>
 <th style="padding: 15px;">Purpose</th>
 </tr>
@@ -309,7 +309,7 @@ This reads package.json and installs everything!
 <td style="padding: 15px;"><code>npm outdated</code></td>
 <td style="padding: 15px;">Check for updates</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><code>npm update</code></td>
 <td style="padding: 15px;">Update minor/patch versions</td>
 </tr>
@@ -317,7 +317,7 @@ This reads package.json and installs everything!
 <td style="padding: 15px;"><code>npm list</code></td>
 <td style="padding: 15px;">List installed packages</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><code>npm view pkg</code></td>
 <td style="padding: 15px;">View package info</td>
 </tr>
@@ -325,7 +325,7 @@ This reads package.json and installs everything!
 <td style="padding: 15px;"><code>npm audit</code></td>
 <td style="padding: 15px;">Check for security issues</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><code>npm audit fix</code></td>
 <td style="padding: 15px;">Fix security issues</td>
 </tr>
@@ -335,7 +335,7 @@ This reads package.json and installs everything!
 
 ## 🔧 Bonus Tool: npm-check-updates
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; color: #333;">
 
 ### Update ALL Packages to Latest
 
@@ -361,7 +361,7 @@ npm install
 
 ## 🎯 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #333;">
 
 ### Dependency Management
 
@@ -380,7 +380,7 @@ npm install
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [📘 Chapter 3 Home](./README.md)
 

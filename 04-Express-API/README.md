@@ -14,7 +14,7 @@ Learn Express.js and RESTful API development
 
 ## 🤔 What You'll Learn
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #000;">
 
 This chapter covers:
 
@@ -31,7 +31,7 @@ This chapter covers:
 
 ## 📚 What is a RESTful API?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### REST = Representational State Transfer
 
@@ -51,7 +51,7 @@ A standard way to build web APIs using HTTP methods:
 
 ## 🗂️ Chapter Slides
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #000;">
 
 1. **[Introduction to REST & Express](./01-rest-and-express.md)** - RESTful concepts and setup
 2. **[GET Requests](./02-get-requests.md)** - Retrieving data and route parameters
@@ -66,7 +66,7 @@ A standard way to build web APIs using HTTP methods:
 ## 💡 Key Concepts
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #000;">
 <th style="padding: 15px;">Concept</th>
 <th style="padding: 15px;">Description</th>
 </tr>
@@ -74,7 +74,7 @@ A standard way to build web APIs using HTTP methods:
 <td style="padding: 15px;"><strong>REST</strong></td>
 <td style="padding: 15px;">Architectural style using HTTP methods</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>Express</strong></td>
 <td style="padding: 15px;">Minimal web framework for Node.js</td>
 </tr>
@@ -82,7 +82,7 @@ A standard way to build web APIs using HTTP methods:
 <td style="padding: 15px;"><strong>Endpoint</strong></td>
 <td style="padding: 15px;">URL path for API access</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>Route Parameters</strong></td>
 <td style="padding: 15px;">Dynamic parts of URL (e.g., /api/courses/:id)</td>
 </tr>
@@ -90,7 +90,7 @@ A standard way to build web APIs using HTTP methods:
 <td style="padding: 15px;"><strong>Middleware</strong></td>
 <td style="padding: 15px;">Functions that process requests</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>Validation</strong></td>
 <td style="padding: 15px;">Checking input data is correct</td>
 </tr>
@@ -102,7 +102,7 @@ A standard way to build web APIs using HTTP methods:
 
 By the end of this chapter, you will:
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; color: #000;">
 
 ✅ Understand RESTful API principles  
 ✅ Install and configure Express.js  
@@ -120,7 +120,7 @@ By the end of this chapter, you will:
 
 ## 🛠️ Tools You'll Use
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Development Tools
 

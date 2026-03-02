@@ -14,12 +14,12 @@ Complete CRUD operations
 
 ## 📝 PUT vs PATCH
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Understanding the Difference
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #000;">
 <th style="padding: 15px;">Method</th>
 <th style="padding: 15px;">Purpose</th>
 <th style="padding: 15px;">Usage</th>
@@ -29,7 +29,7 @@ Complete CRUD operations
 <td style="padding: 15px;">Replace entire resource</td>
 <td style="padding: 15px;">Update all fields</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>PATCH</strong></td>
 <td style="padding: 15px;">Partial update</td>
 <td style="padding: 15px;">Update specific fields</td>
@@ -54,7 +54,7 @@ PATCH /api/courses/1
 
 ## 🔄 PUT Request Steps
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Implementation Steps
 
@@ -76,7 +76,7 @@ Steps 1-4 are similar to GET and POST!
 
 ## ✅ Refactoring: Validation Function
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Extract Validation Logic
 
@@ -105,7 +105,7 @@ Now reuse in both POST and PUT!
 
 ## 🔄 Complete PUT Implementation
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Full PUT Route
 
@@ -141,7 +141,7 @@ app.put('/api/courses/:id', (req, res) => {
 
 ## 🧪 Testing PUT with Postman
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Update a Course
 
@@ -183,9 +183,59 @@ PUT /api/courses/10
 
 ---
 
+## 🔌 Testing PUT with REST Client
+
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
+
+### Using VS Code REST Client Extension
+
+Create or add to your `test.http` file:
+
+```http
+### Update a course (PUT)
+PUT http://localhost:3000/api/courses/1
+Content-Type: application/json
+
+{
+    "name": "Updated Course Name"
+}
+
+### Update with short name (should fail validation)
+PUT http://localhost:3000/api/courses/1
+Content-Type: application/json
+
+{
+    "name": "ab"
+}
+
+### Update non-existent course (should return 404)
+PUT http://localhost:3000/api/courses/999
+Content-Type: application/json
+
+{
+    "name": "This Course Does Not Exist"
+}
+```
+
+### How to Use
+
+1. Install **REST Client** extension in VS Code
+2. Click **"Send Request"** above each `PUT` line
+3. View response in split pane
+
+### Expected Responses
+
+✅ **Valid update:** `200 OK` with updated course  
+❌ **Short name:** `400 Bad Request` - validation error  
+❌ **Wrong ID:** `404 Not Found` - course not found
+
+</div>
+
+---
+
 ## 🗑️ DELETE Request
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### DELETE Steps
 
@@ -221,7 +271,7 @@ app.delete('/api/courses/:id', (req, res) => {
 
 ## �� Understanding Array Methods
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Array.indexOf()
 
@@ -256,7 +306,7 @@ courses.splice(index, 1);
 
 ## 🧪 Testing DELETE with Postman
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Delete a Course
 
@@ -286,14 +336,52 @@ Course with given ID not found
 
 ---
 
+## 🔌 Testing DELETE with REST Client
+
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
+
+### Using VS Code REST Client Extension
+
+Add to your `test.http` file:
+
+```http
+### Delete a course
+DELETE http://localhost:3000/api/courses/3
+
+### Try to delete non-existent course (should return 404)
+DELETE http://localhost:3000/api/courses/999
+
+### Get all courses to verify deletion
+GET http://localhost:3000/api/courses
+```
+
+### How to Use
+
+1. Click **"Send Request"** above the DELETE line
+2. View response showing the deleted course
+3. Run the GET request to confirm course is removed
+
+### Expected Responses
+
+✅ **Valid delete:** `200 OK` with deleted course data  
+❌ **Wrong ID:** `404 Not Found` - course not found
+
+### Tip
+
+💡 After deleting, try to GET the same course ID - it should return 404!
+
+</div>
+
+---
+
 ## 📊 Complete API Summary
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### All CRUD Operations
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #000;">
 <th style="padding: 15px;">Method</th>
 <th style="padding: 15px;">Endpoint</th>
 <th style="padding: 15px;">Action</th>
@@ -303,7 +391,7 @@ Course with given ID not found
 <td style="padding: 15px;">/api/courses</td>
 <td style="padding: 15px;">Get all courses</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>GET</strong></td>
 <td style="padding: 15px;">/api/courses/:id</td>
 <td style="padding: 15px;">Get one course</td>
@@ -313,7 +401,7 @@ Course with given ID not found
 <td style="padding: 15px;">/api/courses</td>
 <td style="padding: 15px;">Create course</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>PUT</strong></td>
 <td style="padding: 15px;">/api/courses/:id</td>
 <td style="padding: 15px;">Update course</td>
@@ -331,7 +419,7 @@ Course with given ID not found
 
 ## 🔧 Full API Code
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Complete Implementation
 
@@ -406,7 +494,7 @@ app.listen(3000, () => console.log('Listening on port 3000...'));
 
 ## 💡 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #000;">
 
 ### PUT & DELETE Guidelines
 

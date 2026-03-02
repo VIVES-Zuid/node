@@ -14,7 +14,7 @@ Learn route parameters and query strings
 
 ## 🛣️ Route Parameters
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Dynamic URL Segments
 
@@ -43,7 +43,7 @@ req.params.id  // The value from :id
 
 ## 📝 Multiple Parameters
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### More Than One Parameter
 
@@ -69,7 +69,7 @@ app.get('/api/posts/:year/:month', (req, res) => {
 
 ## 🔍 Query String Parameters
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Optional Parameters
 
@@ -104,7 +104,7 @@ req.query.limit   // "10"
 
 ## 🎯 GET One Course Example
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Setup: Course Array
 
@@ -134,7 +134,7 @@ app.get('/api/courses', (req, res) => {
 
 ## 🔎 Finding a Specific Course
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Using Array.find()
 
@@ -161,7 +161,7 @@ parseInt(req.params.id)  // Converts "1" to 1
 
 ## ⚠️ Handling Not Found (404)
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #000;">
 
 ### Proper Error Handling
 
@@ -194,7 +194,7 @@ app.get('/api/courses/:id', (req, res) => {
 
 ## 🧪 Testing GET Endpoints
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### In the Browser
 
@@ -226,7 +226,7 @@ Also check the **Network tab** in browser DevTools to see the 404 status!
 
 ## 🔧 Complete GET Example
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Full Implementation
 
@@ -267,7 +267,7 @@ app.listen(3000, () => {
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #000;">
 
 ### GET Request Guidelines
 
@@ -287,7 +287,7 @@ app.listen(3000, () => {
 
 ## 🎯 Summary
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #000;">
 
 ### GET Requests
 

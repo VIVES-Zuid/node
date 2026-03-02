@@ -14,7 +14,7 @@ Install and use packages from the npm registry
 
 ## 📦 Installing a Package
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Example: Installing Underscore
 
@@ -40,7 +40,7 @@ milan@npm-demo〽
 
 ## 📝 What Happened?
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Three Things Changed
 
@@ -49,7 +49,7 @@ milan@npm-demo〽
 ```json
 {
   "dependencies": {
-    "underscore": "^1.12.0"
+    "underscore": "^1.13.8"
   }
 }
 ```
@@ -74,7 +74,7 @@ Locks exact versions of all dependencies.
 
 ## ⚠️ Old Syntax (No Longer Needed)
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #ff9800; color: #333;">
 
 ### Before npm 5
 
@@ -98,7 +98,7 @@ npm i package  # ✅ Automatically saves
 
 ## 💻 Using the Installed Package
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Create index.js
 
@@ -124,9 +124,74 @@ milan@npm-demo〽
 
 ---
 
+## 🤖 Example: AI Sentiment Analysis
+
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
+
+### Installing the sentiment Package
+
+The `sentiment` package uses AI to analyze text and determine if it's positive, negative, or neutral. No API keys needed!
+
+🔗 https://www.npmjs.com/package/sentiment
+
+**Install it:**
+
+```bash
+milan@npm-demo〽 npm i sentiment
+
+added 1 package, and audited 3 packages in 2s
+
+found 0 vulnerabilities
+milan@npm-demo〽
+```
+
+</div>
+
+---
+
+## 💻 Using the Sentiment Package
+
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
+
+### Create sentiment.js
+
+```javascript
+const Sentiment = require('sentiment');
+const sentiment = new Sentiment();
+
+const result1 = sentiment.analyze('This course is amazing and I love Node.js!');
+console.log(result1.score);        // 5 (positive)
+console.log(result1.comparative);  // 0.556
+
+const result2 = sentiment.analyze('This is terrible and boring.');
+console.log(result2.score);        // -5 (negative)
+console.log(result2.comparative);  // -1
+
+const result3 = sentiment.analyze('The sky is blue.');
+console.log(result3.score);        // 0 (neutral)
+```
+
+**Run it:**
+
+```bash
+milan@npm-demo〽 node sentiment.js
+5
+0.5555555555555556
+-5
+-1
+0
+milan@npm-demo〽
+```
+
+</div>
+
+> 📖 **Documentation:** https://www.npmjs.com/package/sentiment
+
+---
+
 ## 🔍 How require() Works
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Search Order
 
@@ -178,7 +243,7 @@ require('express')      // ✅ npm package
 
 ## 📁 node_modules Directory
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### What's Inside?
 
@@ -208,7 +273,7 @@ node_modules/
 
 ## 🎯 Key Points
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; color: #333;">
 
 ### Installing Packages
 
@@ -223,7 +288,7 @@ node_modules/
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [📘 Chapter 3 Home](./README.md)
 

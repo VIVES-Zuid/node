@@ -14,7 +14,7 @@ Two things in one!
 
 ## 🔧 npm is TWO Things
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### 1. Command-Line Tool
 
@@ -38,7 +38,7 @@ A massive registry of third-party libraries:
 
 ## 📊 The npm Registry
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Growth Over Time
 
@@ -65,7 +65,7 @@ A massive registry of third-party libraries:
 
 ## 🌍 Free and Open Source
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; border-left: 5px solid #4caf50; color: #333;">
 
 ### Community-Driven
 
@@ -80,7 +80,7 @@ A massive registry of third-party libraries:
 
 ## 💻 npm is Installed with Node.js
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Check Your Installation
 
@@ -90,10 +90,10 @@ When you installed Node.js, npm was automatically installed!
 
 ```bash
 ~ ➤ npm -v
-11.1.0
+11.8.0
 
 ~ ➤ node -v
-v22.13.1
+v23.5.0
 ```
 
 If these commands work, you're all set! ✅
@@ -104,14 +104,14 @@ If these commands work, you're all set! ✅
 
 ## 🔄 Upgrading or Downgrading npm
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Update npm Itself
 
 npm can update itself!
 
 ```bash
-npm i -g npm@7.4.3
+npm i -g npm@11.8.0
 ```
 
 **Breaking down the command:**
@@ -122,7 +122,7 @@ npm i -g npm@7.4.3
 | `i` | Short for `install` |
 | `-g` | Global installation (not in current project) |
 | `npm` | The package name (yes, npm updates itself!) |
-| `@7.4.3` | Optional: specific version |
+| `@11.8.0` | Optional: specific version |
 
 </div>
 
@@ -130,7 +130,7 @@ npm i -g npm@7.4.3
 
 ## 🔑 Command Syntax Pattern
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Understanding npm Commands
 
@@ -162,7 +162,7 @@ npm i package-name --save-dev
 
 ## 🍎 Note for Mac/Linux Users
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #ff9800; color: #333;">
 
 ### Permission Issues
 
@@ -190,7 +190,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 ## 🎨 npm Command Shortcuts
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Save Time with Shortcuts
 
@@ -209,7 +209,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 ## 🔍 Exploring the Registry
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### How to Find Packages
 
@@ -233,7 +233,7 @@ export PATH=~/.npm-global/bin:$PATH
 ## 💡 What You Can Do with npm
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e3f2fd;">
+<tr style="background-color: #e3f2fd; color: #333;">
 <th style="padding: 15px;">Action</th>
 <th style="padding: 15px;">Command</th>
 </tr>
@@ -241,7 +241,7 @@ export PATH=~/.npm-global/bin:$PATH
 <td style="padding: 15px;">Install a package</td>
 <td style="padding: 15px;"><code>npm i package-name</code></td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;">Uninstall a package</td>
 <td style="padding: 15px;"><code>npm un package-name</code></td>
 </tr>
@@ -249,7 +249,7 @@ export PATH=~/.npm-global/bin:$PATH
 <td style="padding: 15px;">Update packages</td>
 <td style="padding: 15px;"><code>npm update</code></td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;">List installed packages</td>
 <td style="padding: 15px;"><code>npm list</code></td>
 </tr>
@@ -257,7 +257,7 @@ export PATH=~/.npm-global/bin:$PATH
 <td style="padding: 15px;">View package info</td>
 <td style="padding: 15px;"><code>npm view package-name</code></td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;">Publish your package</td>
 <td style="padding: 15px;"><code>npm publish</code></td>
 </tr>
@@ -267,7 +267,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; color: #333;">
 
 ✅ npm is both a **CLI tool** and a **registry**  
 ✅ Comes **installed with Node.js**  
@@ -286,7 +286,7 @@ Now that you know what npm is, let's learn about **package.json** - the configur
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [📘 Chapter 3 Home](./README.md)
 

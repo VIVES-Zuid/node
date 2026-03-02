@@ -14,7 +14,7 @@ Optimize your Express development workflow
 
 ## 🔄 nodemon - Auto-Restart Server
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### The Problem
 
@@ -42,7 +42,7 @@ npm i -g nodemon
 
 ## 🚀 Using nodemon
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Start Your Server
 
@@ -83,7 +83,7 @@ Listening on port 3000...
 
 ## 🌍 Environment Variables
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Don't Hardcode Configuration!
 
@@ -115,7 +115,7 @@ app.listen(port, () => {
 
 ## 🔧 Setting Environment Variables
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### On Different Platforms
 
@@ -149,7 +149,7 @@ Listening on port 5000...
 
 ## 🔒 Environment Variables Best Practices
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; border-left: 5px solid #2196f3;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; border-left: 5px solid #2196f3; color: #000;">
 
 ### Important Notes
 
@@ -209,7 +209,7 @@ const port = process.env.PORT || 3000;
 
 ## 📋 API Development Checklist
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Before You Start
 
@@ -234,7 +234,7 @@ const port = process.env.PORT || 3000;
 
 ## 💡 Express Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #000;">
 
 ### Code Organization
 
@@ -256,7 +256,7 @@ const port = process.env.PORT || 3000;
 
 ## 🎨 Response Format Standards
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Consistent API Responses
 
@@ -296,7 +296,7 @@ const port = process.env.PORT || 3000;
 ## 📊 HTTP Status Codes Reference
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #000;">
 <th style="padding: 15px;">Code</th>
 <th style="padding: 15px;">Meaning</th>
 <th style="padding: 15px;">When to Use</th>
@@ -306,7 +306,7 @@ const port = process.env.PORT || 3000;
 <td style="padding: 15px;">OK</td>
 <td style="padding: 15px;">Successful GET, PUT, DELETE</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>201</strong></td>
 <td style="padding: 15px;">Created</td>
 <td style="padding: 15px;">Successful POST</td>
@@ -316,7 +316,7 @@ const port = process.env.PORT || 3000;
 <td style="padding: 15px;">Bad Request</td>
 <td style="padding: 15px;">Validation failed</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>404</strong></td>
 <td style="padding: 15px;">Not Found</td>
 <td style="padding: 15px;">Resource doesn't exist</td>
@@ -352,7 +352,7 @@ const port = process.env.PORT || 3000;
 
 ## 📝 Assignment
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #000;">
 
 ### GitHub Classroom Lab
 

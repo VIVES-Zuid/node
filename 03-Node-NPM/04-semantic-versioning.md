@@ -14,7 +14,7 @@ Learn to read and manage package versions
 
 ## 📊 What is Semantic Versioning?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Version Format
 
@@ -37,7 +37,7 @@ Breaking it down:
 
 ## 🔄 Version Modifiers
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Caret (^) - Default
 
@@ -79,7 +79,7 @@ Breaking it down:
 
 ## 📈 Version Number Meanings
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Major Version (1.x.x)
 
@@ -138,7 +138,7 @@ Breaking it down:
 
 ## 📖 Alternative Notation
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Using X for Wildcards
 
@@ -162,7 +162,7 @@ This is equivalent to:
 
 ## 🔍 Checking Versions
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### In package.json
 
@@ -171,9 +171,9 @@ Look at your dependencies:
 ```json
 {
   "dependencies": {
-    "express": "^4.18.0",
-    "mongoose": "~5.11.17",
-    "lodash": "4.17.21"
+    "express": "^5.2.1",
+    "mongoose": "~9.2.1",
+    "lodash": "4.17.23"
   }
 }
 ```
@@ -185,8 +185,8 @@ Look at your dependencies:
 ```bash
 milan@npm-demo〽 npm list
 npm-demo@1.0.0 /Users/milan/Dev/nodeVb/npm-demo
-├── mongoose@5.11.17
-└── underscore@1.12.0
+├── mongoose@9.2.1
+└── underscore@1.13.8
 ```
 
 **With depth:**
@@ -194,11 +194,11 @@ npm-demo@1.0.0 /Users/milan/Dev/nodeVb/npm-demo
 ```bash
 milan@npm-demo〽 npm list --depth=1
 npm-demo@1.0.0 /Users/milan/Dev/nodeVb/npm-demo
-├─┬ mongoose@5.11.17
-│ ├── @types/mongodb@3.6.7
-│ ├── bson@1.1.5
+├─┬ mongoose@9.2.1
+│ ├── bson@6.10.3
+│ ├── mongodb@6.15.0
 │ └── ...
-└── underscore@1.12.0
+└── underscore@1.13.8
 ```
 
 </div>
@@ -207,7 +207,7 @@ npm-demo@1.0.0 /Users/milan/Dev/nodeVb/npm-demo
 
 ## 📦 View Package Information
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### npm view
 
@@ -216,15 +216,14 @@ Get detailed package information:
 ```bash
 milan@npm-demo〽 npm view mongoose
 
-mongoose@5.11.17 | MIT | deps: 12 | versions: 641
+mongoose@9.2.1 | MIT | deps: 4 | versions: 1050
 Mongoose MongoDB ODM
 https://mongoosejs.com
 
 dependencies:
-@types/mongodb: ^3.5.27
-bson: ^1.1.4
-kareem: 2.3.2
-mongodb: 3.6.4
+bson: ^6.10.3
+mongodb: ~6.15.0
+mpath: ^0.9.0
 ...
 ```
 
@@ -236,10 +235,9 @@ mongodb: 3.6.4
 milan@npm-demo〽 npm view mongoose dependencies
 
 {
-  '@types/mongodb': '^3.5.27',
-  'bson': '^1.1.4',
-  'kareem': '2.3.2',
-  'mongodb': '3.6.4',
+  'bson': '^6.10.3',
+  'mongodb': '~6.15.0',
+  'mpath': '^0.9.0',
   ...
 }
 ```
@@ -256,8 +254,8 @@ milan@npm-demo〽 npm view mongoose versions
   '0.0.2',
   '0.0.3',
   ...
-  '5.11.17',
-  '6.0.0'
+  '8.13.2',
+  '9.2.1'
 ]
 ```
 
@@ -267,7 +265,7 @@ milan@npm-demo〽 npm view mongoose versions
 
 ## 🎯 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #333;">
 
 ### Version Management
 
@@ -288,7 +286,7 @@ milan@npm-demo〽 npm view mongoose versions
 ## 📊 Quick Reference
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e3f2fd;">
+<tr style="background-color: #e3f2fd; color: #333;">
 <th style="padding: 15px;">Notation</th>
 <th style="padding: 15px;">Updates Allowed</th>
 <th style="padding: 15px;">Example</th>
@@ -298,7 +296,7 @@ milan@npm-demo〽 npm view mongoose versions
 <td style="padding: 15px;">Minor & Patch</td>
 <td style="padding: 15px;">1.8.3 → 1.9.5 ✅</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><code>~1.8.3</code></td>
 <td style="padding: 15px;">Patch only</td>
 <td style="padding: 15px;">1.8.3 → 1.8.9 ✅</td>
@@ -308,7 +306,7 @@ milan@npm-demo〽 npm view mongoose versions
 <td style="padding: 15px;">None</td>
 <td style="padding: 15px;">Only 1.8.3</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><code>*</code></td>
 <td style="padding: 15px;">All</td>
 <td style="padding: 15px;">Latest version ⚠️</td>
@@ -317,7 +315,7 @@ milan@npm-demo〽 npm view mongoose versions
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [📘 Chapter 3 Home](./README.md)
 

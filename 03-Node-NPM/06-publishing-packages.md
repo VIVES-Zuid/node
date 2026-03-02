@@ -14,7 +14,7 @@ Contribute to the npm ecosystem!
 
 ## 🏗️ Creating a Package
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Step 1: Create Your Project
 
@@ -47,7 +47,7 @@ module.exports.multiply = function(a, b) {
 
 ## 👤 npm Account Setup
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Create an Account
 
@@ -81,7 +81,7 @@ Logged in as vives on https://registry.npmjs.org/.
 
 ## 📦 Publishing Your Package
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### The Publish Command
 
@@ -113,7 +113,7 @@ npm notice
 
 ## ⚠️ Package Name Must Be Unique
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #333;">
 
 ### Name Conflicts
 
@@ -143,7 +143,7 @@ npm ERR! Are you logged in as the correct user?
 
 ## 🔍 View Your Published Package
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### On npmjs.com
 
@@ -199,7 +199,7 @@ node index.js
 
 ## 📥 Installing Your Package
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Anyone Can Install It Now!
 
@@ -233,7 +233,7 @@ milan@viveslib-vb〽
 
 ## 🔄 Publishing Updates
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Update Your Code
 
@@ -268,7 +268,7 @@ npm ERR! You cannot publish over the previously published version 1.0.0.
 
 ## 📈 Updating Version Numbers
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Option 1: Manual Update
 
@@ -308,7 +308,7 @@ This also creates a git tag automatically!
 
 ## 📤 Publish the Update
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Now Publish
 
@@ -341,7 +341,7 @@ npm i vives-lib@latest
 
 ## 📋 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #333;">
 
 ### Publishing Guidelines
 
@@ -364,7 +364,7 @@ npm i vives-lib@latest
 
 ## 📝 Adding a README
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Create README.md
 
@@ -409,7 +409,7 @@ Returns the difference of a and b.
 
 ## 🗑️ Unpublishing Packages
 
-<div style="background-color: #ffebee; padding: 20px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 20px; border-radius: 10px; border-left: 5px solid #f44336; color: #333;">
 
 ### Remove a Package
 
@@ -456,7 +456,7 @@ npm deprecate vives-lib "No longer maintained"
 
 ## 📝 Assignment
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #333;">
 
 ### GitHub Classroom Lab
 
@@ -470,7 +470,7 @@ Practice creating, publishing, and using npm packages!
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [📘 Chapter 3 Home](./README.md)
 

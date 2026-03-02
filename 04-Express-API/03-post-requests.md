@@ -14,7 +14,7 @@ Learn to handle data creation and validate input
 
 ## 📝 POST Request Basics
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Creating a Course
 
@@ -47,7 +47,7 @@ This parses incoming JSON in request bodies.
 
 ## 🔌 Enable JSON Parsing
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Complete Setup
 
@@ -85,7 +85,7 @@ app.listen(3000, () => {
 
 ## 📮 Testing with Postman
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Using Postman
 
@@ -118,7 +118,7 @@ app.listen(3000, () => {
 
 ## 🔌 REST Client (VS Code Extension)
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Alternative to Postman
 
@@ -148,7 +148,7 @@ Click "Send Request" above each request!
 
 ## ⚠️ Input Validation Problem
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #000;">
 
 ### Never Trust User Input!
 
@@ -175,7 +175,7 @@ const course = {
 
 ## ✅ Basic Validation
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Manual Validation
 
@@ -210,7 +210,7 @@ app.post('/api/courses', (req, res) => {
 
 ## 🎯 Validation with Joi
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Install Joi
 
@@ -243,7 +243,7 @@ app.post('/api/courses', (req, res) => {
 
 ## 🔍 Joi Validation Result
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #000;">
 
 ### With Invalid Input
 
@@ -280,7 +280,7 @@ app.post('/api/courses', (req, res) => {
 
 ## ✅ Complete Joi Validation
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Full Implementation
 
@@ -316,7 +316,7 @@ app.post('/api/courses', (req, res) => {
 
 ## 📋 User-Friendly Error Messages
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Extracting the Message
 
@@ -352,7 +352,7 @@ res.status(400).send(result.error.details[0].message);
 
 ## 💡 Joi Schema Examples
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #000;">
 
 ### Different Validation Rules
 
@@ -392,7 +392,7 @@ const schema = Joi.object({
 
 ## 🎯 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #000;">
 
 ### POST Request Guidelines
 
@@ -414,7 +414,7 @@ const schema = Joi.object({
 ## 📊 HTTP Status Codes for POST
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e8f5e9;">
+<tr style="background-color: #e8f5e9; color: #000;">
 <th style="padding: 15px;">Status</th>
 <th style="padding: 15px;">Meaning</th>
 <th style="padding: 15px;">When to Use</th>
@@ -424,7 +424,7 @@ const schema = Joi.object({
 <td style="padding: 15px;">Success</td>
 <td style="padding: 15px;">Resource created successfully</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>201 Created</strong></td>
 <td style="padding: 15px;">Resource created</td>
 <td style="padding: 15px;">Preferred for POST (best practice)</td>
@@ -434,7 +434,7 @@ const schema = Joi.object({
 <td style="padding: 15px;">Invalid input</td>
 <td style="padding: 15px;">Validation failed</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #000;">
 <td style="padding: 15px;"><strong>401 Unauthorized</strong></td>
 <td style="padding: 15px;">Not authenticated</td>
 <td style="padding: 15px;">Login required</td>

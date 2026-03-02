@@ -14,7 +14,7 @@ Configuration file containing project metadata and dependencies
 
 ## 📦 Purpose of package.json
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 The `package.json` file stores information about your application:
 
@@ -33,7 +33,7 @@ The `package.json` file stores information about your application:
 
 ## 🏗️ Creating package.json
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Step-by-Step Setup
 
@@ -69,7 +69,7 @@ license: (ISC)
 
 ## ⚡ Quick Initialization
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #333;">
 
 ### Skip the Wizard
 
@@ -106,7 +106,7 @@ You can edit it later!
 
 ## 📋 package.json Structure
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #333;">
 
 ### Common Fields
 
@@ -124,10 +124,10 @@ You can edit it later!
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^30.2.0"
   }
 }
 ```
@@ -139,7 +139,7 @@ You can edit it later!
 ## 🔑 Important Fields Explained
 
 <table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e3f2fd;">
+<tr style="background-color: #e3f2fd; color: #333;">
 <th style="padding: 15px;">Field</th>
 <th style="padding: 15px;">Description</th>
 </tr>
@@ -147,7 +147,7 @@ You can edit it later!
 <td style="padding: 15px;"><strong>name</strong></td>
 <td style="padding: 15px;">Package name (must be unique if publishing)</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><strong>version</strong></td>
 <td style="padding: 15px;">Current version (follows SemVer)</td>
 </tr>
@@ -155,7 +155,7 @@ You can edit it later!
 <td style="padding: 15px;"><strong>main</strong></td>
 <td style="padding: 15px;">Entry point file</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><strong>scripts</strong></td>
 <td style="padding: 15px;">Commands you can run with npm</td>
 </tr>
@@ -163,7 +163,7 @@ You can edit it later!
 <td style="padding: 15px;"><strong>dependencies</strong></td>
 <td style="padding: 15px;">Production dependencies</td>
 </tr>
-<tr style="background-color: #f5f5f5;">
+<tr style="background-color: #f5f5f5; color: #333;">
 <td style="padding: 15px;"><strong>devDependencies</strong></td>
 <td style="padding: 15px;">Development-only dependencies</td>
 </tr>
@@ -173,7 +173,7 @@ You can edit it later!
 
 ## 🎯 var, let, or const?
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #333;">
 
 ### JavaScript Variable Declaration (ES6+)
 
@@ -198,7 +198,7 @@ greeter = "changed again";          // Can change
 
 ## 📝 let and const
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #333;">
 
 ### `let` - Block-Scoped Variable ✅
 
@@ -233,7 +233,7 @@ const greeting = "say Hello instead"; // ❌ Cannot redeclare
 
 ## 💡 Best Practice
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #333;">
 
 ### Modern JavaScript
 
@@ -265,7 +265,7 @@ Now that you have a `package.json` file, let's learn how to **install third-part
 
 ---
 
-<div style="text-align: center; padding: 20px; color: #666;">
+<div style="text-align: center; padding: 20px; color: #333;">
 
 [🏠 Course Home](../README.md) | [📘 Chapter 3 Home](./README.md)
 
