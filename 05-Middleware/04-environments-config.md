@@ -14,7 +14,7 @@ Configure your app for different environments
 
 ## 🌐 What are Environments?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Three Main Environments
 
@@ -50,7 +50,7 @@ Configure your app for different environments
 
 ## 🔍 process.env.NODE_ENV
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Checking the Environment
 
@@ -76,7 +76,7 @@ app.get('env'): development
 
 ## ⚙️ Setting NODE_ENV
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Different Platforms
 
@@ -110,7 +110,7 @@ app.get('env'): production
 
 ## 📊 Environment-Dependent Logging
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Only Log in Development
 
@@ -151,7 +151,7 @@ Listening on port 3000...
 
 ## ⚙️ Configuration Management with config
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### The config Package
 
@@ -182,7 +182,7 @@ project/
 
 ## 📄 Configuration Files
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### config/default.json
 
@@ -220,7 +220,7 @@ project/
 
 ## 🔧 Using config in Your App
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### index.js
 
@@ -255,7 +255,7 @@ Mail Host: prod-mail-server
 
 ## 🔐 Storing Secrets Securely
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### ⚠️ NEVER Store Passwords in Config Files!
 
@@ -282,7 +282,7 @@ export app_password=1234
 
 ## 🔒 custom-environment-variables.json
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Map Environment Variables
 
@@ -324,7 +324,7 @@ Password: 1234
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Configuration Guidelines
 

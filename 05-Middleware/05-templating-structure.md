@@ -14,7 +14,7 @@ Pug templating and modular structure
 
 ## 🎨 Templating Engines
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Why Templating?
 
@@ -35,7 +35,7 @@ Each has different syntax!
 
 ## 🐶 Pug Template Engine
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Installation
 
@@ -64,7 +64,7 @@ app.set('views', './views');
 
 ## 📁 Directory Structure for Views
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Create views Folder
 
@@ -90,7 +90,7 @@ app.set('views', './my-templates');
 
 ## 📝 Pug Syntax
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### views/index.pug
 
@@ -124,7 +124,7 @@ app.get('/', (req, res) => {
 
 ## �� Pug Output
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Browser Output
 
@@ -153,7 +153,7 @@ Hello
 
 ## 📂 Project Structure
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Current Problem
 
@@ -181,7 +181,7 @@ Organize code into logical folders:
 
 ## 🛣️ Separating Routes
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Create routes/courses.js
 
@@ -217,7 +217,7 @@ module.exports = router;
 
 ## 🔗 Connecting Routes in index.js
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Import and Mount Routes
 
@@ -249,7 +249,7 @@ app.listen(3000);
 
 ## 📄 routes/home.js
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Home Route
 
@@ -275,7 +275,7 @@ Clean separation of concerns!
 
 ## 📁 Complete Project Structure
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Organized Express App
 
@@ -307,7 +307,7 @@ project/
 
 ## 🔧 Moving Middleware
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### middleware/logger.js
 
@@ -334,7 +334,7 @@ app.use(logger);
 
 ## 💡 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Project Structure Guidelines
 
@@ -375,7 +375,7 @@ app.use(logger);
 
 ## 📝 Assignment
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### GitHub Classroom Lab
 

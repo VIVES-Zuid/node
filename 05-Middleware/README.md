@@ -14,7 +14,7 @@ Learn to use and create middleware functions
 
 ## 🤔 What You'll Learn
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 This chapter covers:
 
@@ -32,7 +32,7 @@ This chapter covers:
 
 ## 🔄 What is Middleware?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### The Request Pipeline
 
@@ -66,7 +66,7 @@ Each middleware can:
 
 ## 🗂️ Chapter Slides
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 1. **[Middleware Basics](./01-middleware-basics.md)** - Understanding middleware
 2. **[Built-in Middleware](./02-builtin-middleware.md)** - express.json, static files
@@ -80,7 +80,7 @@ Each middleware can:
 
 ## 💡 Key Concepts
 
-<table style="width: 100%; border-collapse: collapse;">
+<table style="width: 100%; border-collapse: collapse; color: #1a1a1a;">
 <tr style="background-color: #e8f5e9;">
 <th style="padding: 15px;">Concept</th>
 <th style="padding: 15px;">Description</th>
@@ -117,7 +117,7 @@ Each middleware can:
 
 By the end of this chapter, you will:
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ✅ Understand middleware concept and pipeline  
 ✅ Use built-in Express middleware  
@@ -134,7 +134,7 @@ By the end of this chapter, you will:
 
 ## 🛠️ Tools You'll Use
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Middleware Packages
 

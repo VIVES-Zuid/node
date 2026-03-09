@@ -14,7 +14,7 @@ helmet, morgan, and more!
 
 ## 📚 Third-party Middleware
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### What is Third-party Middleware?
 
@@ -37,7 +37,7 @@ npm packages that provide middleware functionality:
 
 ## ⚠️ Performance Consideration
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #1a1a1a;">
 
 ### Use Only What You Need!
 
@@ -63,7 +63,7 @@ Request → MW1 → MW2 → MW3 → MW4 → MW5 → Route → Response
 
 ## 🛡️ helmet
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Secure Your App
 
@@ -107,7 +107,7 @@ Sets security-related HTTP headers:
 
 ## 📊 morgan - HTTP Request Logger
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Log Every Request
 
@@ -144,7 +144,7 @@ app.listen(3000);
 
 ## 🎨 morgan Output Formats
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Available Formats
 
@@ -178,7 +178,7 @@ GET /api/courses 200 79 - 2.059 ms
 
 ## 🔧 Complete Example with Third-party Middleware
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### index.js
 
@@ -214,7 +214,7 @@ app.listen(3000, () => {
 
 ## 💡 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Third-party Middleware Guidelines
 

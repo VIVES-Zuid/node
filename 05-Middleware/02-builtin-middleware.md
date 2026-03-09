@@ -14,7 +14,7 @@ No installation required!
 
 ## 📋 Built-in Middleware Overview
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Three Main Built-in Middleware
 
@@ -45,7 +45,7 @@ All built into Express - no separate installation needed!
 
 ## 📝 express.json()
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Parsing JSON Request Bodies
 
@@ -76,7 +76,7 @@ app.post('/api/courses', (req, res) => {
 
 ## 📄 express.urlencoded()
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Parsing HTML Form Data
 
@@ -107,7 +107,7 @@ app.use(express.urlencoded({ extended: true }));
 
 ## 🧪 Testing express.json() with REST Client
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Create test.http
 
@@ -150,7 +150,7 @@ app.listen(3000);
 
 ## 📁 express.static()
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Serving Static Files
 
@@ -196,7 +196,7 @@ http://localhost:3000/readme.txt
 
 ## 🔍 How Static Files Work
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### URL Mapping
 
@@ -231,7 +231,7 @@ Now files are accessed with `/static` prefix:
 
 ## 🎨 Practical Static File Example
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Serving a Website
 
@@ -268,7 +268,7 @@ app.listen(3000, () => {
 
 ## 🔧 Complete Setup Example
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### All Built-in Middleware Together
 
@@ -302,7 +302,7 @@ app.listen(3000, () => {
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Built-in Middleware Guidelines
 
@@ -323,7 +323,7 @@ app.listen(3000, () => {
 
 ## 📊 Middleware Order Reminder
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Correct Order
 

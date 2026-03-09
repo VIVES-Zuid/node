@@ -14,7 +14,7 @@ Functions that execute during the request-response cycle
 
 ## 📖 What is Middleware?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Definition
 
@@ -47,7 +47,7 @@ app.use((req, res, next) => {
 
 ## 🔄 The Request Pipeline
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### How It Works
 
@@ -75,7 +75,7 @@ Each middleware can:
 
 ## 🏗️ Creating Custom Middleware
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Example: Logger Middleware
 
@@ -153,7 +153,7 @@ app.use((req, res, next) => {
 
 ## 🎯 Types of Middleware
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### 1. Application-Level Middleware
 
@@ -165,6 +165,19 @@ app.use((req, res, next) => {
     next();
 });
 ```
+
+### 📌 What is a Router?
+
+<div style="background-color: #fff9e6; padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107; margin: 15px 0; color: #1a1a1a;">
+
+A **Router** is a mini Express application that groups related routes together. It helps organize your code by separating routes into modules (e.g., `/users`, `/products`, `/admin`).
+
+**Why use routers?**
+- 📁 Better code organization
+- 🔄 Reusable route groups
+- 🎯 Apply middleware to specific route groups only
+
+</div>
 
 ### 2. Router-Level Middleware
 
@@ -196,7 +209,7 @@ app.use((err, req, res, next) => {
 
 ## 📍 Middleware Order Matters!
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Example
 
@@ -238,7 +251,7 @@ Route handler
 
 ## 🛣️ Route-Specific Middleware
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Apply to Specific Routes
 
@@ -276,7 +289,7 @@ app.get('/profile', [auth, log], (req, res) => {
 
 ## 💡 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Middleware Guidelines
 
@@ -297,7 +310,7 @@ app.get('/profile', [auth, log], (req, res) => {
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Middleware Essentials
 
