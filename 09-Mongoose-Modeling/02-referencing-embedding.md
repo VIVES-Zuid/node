@@ -10,25 +10,60 @@
 
 **✅ HIGH Consistency | ❌ LOW Performance**
 
-```javascript
-// Author stored separately
-let author = {
-  _id: 'author123',
-  name: 'Vives'
-}
+The author is stored in a **separate collection** and the course only holds the author's `_id`.
 
-// Course references the author by ID
-let course = {
-  name: 'Node.js Course',
-  author: 'author123'  // Reference to author
-}
+```javascript
+// Authors collection
+{ _id: ObjectId('64a1...'), name: 'Vives', bio: '...', website: '...' }
+
+// Courses collection — stores only the reference
+{ _id: ObjectId('64b2...'), name: 'Node.js Course', author: ObjectId('64a1...') }
 ```
 
 **Characteristics:**
 - 📌 Data stored in separate collections
 - 🔄 Single source of truth
-- 🔍 Requires multiple queries to get complete data
-- ✨ Updates happen in one place
+- 🔍 Requires a second query (via `populate()`) to get the full author
+- ✨ Update the author once — every course reflects it automatically
+
+#### Mongoose Schema
+
+```javascript
+const mongoose = require('mongoose');
+
+const authorSchema = new mongoose.Schema({
+  name: String,
+  bio:  String,
+});
+const Author = mongoose.model('Author', authorSchema);
+
+const courseSchema = new mongoose.Schema({
+  name: String,
+  author: {
+    type: mongoose.Schema.Types.ObjectId,  // stores the _id
+    ref:  'Author',                        // tells populate() which model to use
+    required: true,
+  },
+});
+const Course = mongoose.model('Course', courseSchema);
+```
+
+#### Creating & Reading
+
+```javascript
+// --- Create ---
+const author = await Author.create({ name: 'Vives', bio: 'Educational institution' });
+const course = await Course.create({ name: 'Node.js Course', author: author._id });
+
+// --- Read without populate (only gets the ObjectId) ---
+const raw = await Course.findById(course._id);
+console.log(raw.author); // ObjectId('64a1...')
+
+// --- Read WITH populate (replaces the id with the full document) ---
+const full = await Course.findById(course._id).populate('author');
+console.log(full.author.name); // 'Vives'
+console.log(full.author.bio);  // 'Educational institution'
+```
 
 ---
 
@@ -36,21 +71,57 @@ let course = {
 
 **✅ HIGH Performance | ❌ LOW Consistency**
 
+The author's data lives **inside** the course document — no second collection needed.
+
 ```javascript
-// Author embedded within course
-let course = {
+// Courses collection — author is embedded
+{
+  _id: ObjectId('64b2...'),
   name: 'Node.js Course',
-  author: {
-    name: 'Vives'
-  }
+  author: { name: 'Vives', bio: 'Educational institution' }
 }
 ```
 
 **Characteristics:**
-- ⚡ Single query retrieves all data
+- ⚡ Single query retrieves all data — no `populate()` needed
 - 💾 Data duplicated across documents
-- 🔄 Updates must happen in multiple places
+- 🔄 If the author's name changes, every course must be updated individually
 - 🚀 Faster read operations
+
+#### Mongoose Schema
+
+```javascript
+const mongoose = require('mongoose');
+
+const courseSchema = new mongoose.Schema({
+  name: String,
+  author: {        // nested object — no ref, no separate collection
+    name: String,
+    bio:  String,
+  },
+});
+const Course = mongoose.model('Course', courseSchema);
+```
+
+#### Creating & Reading
+
+```javascript
+// --- Create ---
+const course = await Course.create({
+  name: 'Node.js Course',
+  author: { name: 'Vives', bio: 'Educational institution' },
+});
+
+// --- Read (author data is already there — no populate needed) ---
+const found = await Course.findById(course._id);
+console.log(found.author.name); // 'Vives'
+
+// --- Updating the embedded author (must update every course!) ---
+await Course.updateMany(
+  { 'author.name': 'Vives' },
+  { $set: { 'author.name': 'VIVES Hogeschool' } }
+);
+```
 
 ---
 
@@ -59,7 +130,7 @@ let course = {
 ```mermaid
 graph TB
     subgraph "Referencing (Normalization)"
-    A1[Course Collection] -->|author_id| B1[Author Collection]
+    A1[Course Collection] -->|author ObjectId| B1[Author Collection]
     end
     
     subgraph "Embedding (Denormalization)"
@@ -82,7 +153,7 @@ graph TB
 | Data consistency | Multiple queries needed |
 | Single source of truth | Slower read operations |
 | Easy updates | More complex queries |
-| Less storage used | Requires JOIN operations |
+| Less storage used | Requires `populate()` or `$lookup` |
 
 ### Embedding Advantages
 
@@ -123,43 +194,32 @@ graph TD
 ### 🔗 Use Referencing When:
 
 ```javascript
-// User and their orders (can have thousands)
-{
-  user: { _id: '123', name: 'John' },
-  orders: ['order1', 'order2', 'order3', ...] // References
-}
+// User document
+{ _id: ObjectId('u1'), name: 'John' }
 
-// Blog posts and comments (unbounded growth)
-{
-  post: { _id: 'post1', title: 'My Post' },
-  comments: ['comment1', 'comment2', ...] // References
-}
+// Orders reference the user (can have thousands of orders)
+{ _id: ObjectId('o1'), userId: ObjectId('u1'), total: 49.99 }
+{ _id: ObjectId('o2'), userId: ObjectId('u1'), total: 19.99 }
+
+// Blog post references its comments (unbounded growth)
+{ _id: ObjectId('p1'), title: 'My Post', commentIds: [ObjectId('c1'), ObjectId('c2')] }
 ```
 
 ### 📦 Use Embedding When:
 
 ```javascript
-// User profile with address (limited, rarely changes)
+// User document with embedded address (limited fields, rarely changes)
 {
-  user: {
-    name: 'John',
-    address: {
-      street: '123 Main St',
-      city: 'Brussels'
-    }
-  }
+  _id: ObjectId('u1'),
+  name: 'John',
+  address: { street: '123 Main St', city: 'Brussels' }
 }
 
-// Product with specifications (fixed structure)
+// Product document with embedded specs (fixed structure, always needed together)
 {
-  product: {
-    name: 'Laptop',
-    specs: {
-      cpu: 'i7',
-      ram: '16GB',
-      storage: '512GB SSD'
-    }
-  }
+  _id: ObjectId('p1'),
+  name: 'Laptop',
+  specs: { cpu: 'i7', ram: '16GB', storage: '512GB SSD' }
 }
 ```
 

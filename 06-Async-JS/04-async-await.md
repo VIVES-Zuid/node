@@ -14,7 +14,7 @@ Make promises look synchronous
 
 ## 📖 What is Async/Await?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Definition
 
@@ -39,7 +39,7 @@ Make promises look synchronous
 
 ## 🔄 From Promises to Async/Await
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### With Promises
 
@@ -68,7 +68,7 @@ console.log(commits);
 
 ## 🏗️ Creating Async Functions
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### The async Keyword
 
@@ -96,7 +96,7 @@ displayCommits();
 
 ## 🔍 How Await Works
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Understanding await
 
@@ -129,7 +129,7 @@ console.log(user);  // { id: 1, gitHubUsername: 'MilanVives' }
 
 ## 📝 Complete Async/Await Example
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Full Code
 
@@ -175,7 +175,7 @@ Getting commits...
 
 ## ❌ Error Handling with Try/Catch
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### The Problem
 
@@ -210,7 +210,7 @@ displayCommits();
 
 ## 🆚 Comparison: All Three Approaches
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Callbacks (Old Way)
 
@@ -255,7 +255,7 @@ async function display() {
 
 ## 🎯 Async Functions Return Promises
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Important Fact
 
@@ -286,7 +286,7 @@ console.log(name);  // Milan
 
 ## 🔄 Parallel Execution with Async/Await
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Sequential (Slow)
 
@@ -322,7 +322,7 @@ const [user, repos] = await Promise.all([
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Async/Await Guidelines
 
@@ -346,7 +346,7 @@ const [user, repos] = await Promise.all([
 
 ## 🚨 Common Mistakes
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #1a1a1a;">
 
 ### Mistake 1: Forgetting async
 
@@ -410,7 +410,7 @@ async function getData() {
 
 ## 📝 Assignment & Resources
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### GitHub Classroom Lab
 

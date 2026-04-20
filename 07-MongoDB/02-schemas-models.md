@@ -14,7 +14,7 @@ Structure your MongoDB documents with Mongoose
 
 ## 📖 What is a Schema?
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Definition
 
@@ -43,7 +43,7 @@ MongoDB is schemaless, but Mongoose adds structure:
 
 ## 🔧 Schema Types
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Available Types
 
@@ -98,7 +98,7 @@ Mongoose supports these schema types:
 
 ## 🏗️ Creating a Schema
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Basic Schema Definition
 
@@ -137,7 +137,7 @@ tags: [String]  // Array of strings
 
 ## 🎨 What is a Model?
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Definition
 
@@ -173,7 +173,7 @@ The model gives us a **Class** to create document instances!
 
 ## 🔄 The Three-Step Process
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### 1️⃣ Create Schema (Template)
 
@@ -213,7 +213,7 @@ The object is automatically mapped to a MongoDB document!
 
 ## 📝 Complete Example
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Full Schema and Model Setup
 
@@ -252,7 +252,7 @@ const course = new Course({
 
 ## 🔍 Schema with Default Values
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Setting Defaults
 
@@ -289,7 +289,7 @@ const courseSchema = new mongoose.Schema({
 
 ## 🎯 Arrays in Schemas
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Array Fields
 
@@ -328,7 +328,7 @@ const course = new Course({
 
 ## 🆔 ObjectID
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Unique Document Identifier
 
@@ -365,7 +365,7 @@ You don't need to create IDs - MongoDB does it automatically!
 
 ## 🔗 Collection Naming
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Automatic Pluralization
 
@@ -400,7 +400,7 @@ const courseSchema = new mongoose.Schema({
 
 ## 💡 Best Practices
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Schema Guidelines
 
@@ -423,7 +423,7 @@ const courseSchema = new mongoose.Schema({
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Schemas & Models Summary
 

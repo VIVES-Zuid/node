@@ -14,7 +14,7 @@ Insert new documents into your database
 
 ## 📖 Creating a Document
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Three Steps
 
@@ -47,7 +47,7 @@ const result = await course.save();
 
 ## ⚡ Async Function Required
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Why Async?
 
@@ -85,7 +85,7 @@ But **async/await** is cleaner! ✨
 
 ## 📝 Complete Example
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Full Code
 
@@ -127,7 +127,7 @@ createCourse();
 
 ## 🖥️ Running the Code
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Terminal Output
 
@@ -161,7 +161,7 @@ Connected with MongoDB
 
 ## 🆔 The _id Field
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Unique ObjectID
 
@@ -193,7 +193,7 @@ MongoDB handles this automatically. Just save your document!
 
 ## 📅 The date Field
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Auto-Generated Date
 
@@ -228,7 +228,7 @@ const course = new Course({
 
 ## 🔢 The __v Field
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Version Key
 
@@ -264,7 +264,7 @@ You generally don't need to worry about this field!
 
 ## 🎨 Creating Multiple Documents
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Adding More Courses
 
@@ -305,7 +305,7 @@ createCourse();
 
 ## 🗄️ Viewing in MongoDB Compass
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Visual Inspection
 
@@ -352,7 +352,7 @@ mongodb://localhost:27017
 
 ## ⚠️ Error Handling
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### Handle Save Errors
 
@@ -390,7 +390,7 @@ Always wrap `.save()` in try/catch!
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Creating Documents Guidelines
 
@@ -414,7 +414,7 @@ Always wrap `.save()` in try/catch!
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Creating Documents Summary
 

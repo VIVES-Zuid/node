@@ -14,7 +14,7 @@ The foundation of Node.js performance
 
 ## 📖 Synchronous Code
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Blocking Execution
 
@@ -42,7 +42,7 @@ Third
 
 ## ⚡ Asynchronous Code
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Non-Blocking Execution
 
@@ -68,7 +68,7 @@ console.log('After');
 
 ## 🤔 Guess the Output
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Will it be?
 
@@ -95,7 +95,7 @@ The setTimeout doesn't block!
 
 ## 🔍 Analyzing setTimeout()
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Function Breakdown
 
@@ -128,7 +128,7 @@ Schedules a function to be executed **after** a delay, without blocking!
 
 ## 🔄 How Async Works
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Execution Flow
 
@@ -151,7 +151,7 @@ graph TD
 
 ## 🎯 Real-World Example
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Why Async Matters
 
@@ -221,7 +221,7 @@ console.log('Other work...');
 
 ## 🚀 Node.js is Asynchronous
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800; color: #1a1a1a;">
 
 ### Why Node.js Uses Async
 
@@ -246,7 +246,7 @@ This makes Node.js **extremely efficient** for web servers!
 
 ## 💡 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### When to Use Async
 
@@ -268,7 +268,7 @@ This makes Node.js **extremely efficient** for web servers!
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Remember
 

@@ -14,7 +14,7 @@ Set up your NoSQL database
 
 ## 📖 What is MongoDB?
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### NoSQL Document Database
 
@@ -48,7 +48,7 @@ Set up your NoSQL database
 
 ## 🐚 What is Mongoose?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Object Document Mapper (ODM)
 
@@ -76,7 +76,7 @@ Mongoose provides all of this!
 
 ## 📦 Installation
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Install Mongoose
 
@@ -116,7 +116,7 @@ docker run -d -p 27017:27017 --name mongodb mongo
 
 ## 🔌 Connecting to MongoDB
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Basic Connection
 
@@ -155,7 +155,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 ## 🎁 Promises with connect()
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### connect() Returns a Promise
 
@@ -188,7 +188,7 @@ connectDB();
 
 ## 📝 Complete Connection Example
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### index.js
 
@@ -220,7 +220,7 @@ Connected with MongoDB
 
 ## 🗄️ MongoDB Terminology
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Key Concepts
 
@@ -271,7 +271,7 @@ Connected with MongoDB
 
 ## 🛠️ MongoDB Compass
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Visual MongoDB Client
 
@@ -303,7 +303,7 @@ You can visually inspect your `playground` database and `courses` collection!
 
 ## 🔑 Connection String Options
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Modern Connection String
 
@@ -341,7 +341,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Connection Guidelines
 
@@ -364,7 +364,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### MongoDB Setup Summary
 

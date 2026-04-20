@@ -14,7 +14,7 @@ Two approaches: Query First vs Update First
 
 ## 🔍 Approach 1: Query First
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### The Process
 
@@ -36,7 +36,7 @@ Two approaches: Query First vs Update First
 
 ## 📝 Query First: Basic Example
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Find, Modify, Save
 
@@ -70,7 +70,7 @@ course.author = 'Another author';
 
 ## 🎨 Query First: Using .set()
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Alternative Syntax
 
@@ -105,7 +105,7 @@ updateCourse('605b9bed4dfe11d32a7548f1');
 
 ## ⚡ Approach 2: Update First
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### The Process
 
@@ -131,7 +131,7 @@ See [MongoDB Update Operators](https://docs.mongodb.com/manual/reference/operato
 
 ## 🔄 Update First: Basic Example
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using .update()
 
@@ -169,7 +169,7 @@ updateCourse2('605b9bed4dfe11d32a7548f1');
 
 ## 🎯 MongoDB Update Operators
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Common Operators
 
@@ -204,7 +204,7 @@ updateCourse2('605b9bed4dfe11d32a7548f1');
 
 ## 🔙 Returning the Updated Document
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using findByIdAndUpdate()
 
@@ -243,7 +243,7 @@ console.log(course);  // Returns updated document
 
 ## 🆚 Query First vs Update First
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Comparison
 
@@ -291,7 +291,7 @@ console.log(course);  // Returns updated document
 
 ## 📚 Update Methods Summary
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Available Methods
 
@@ -325,7 +325,7 @@ await doc.save();
 
 ## ⚠️ Update with Validation
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### Query First: Full Validation
 
@@ -361,7 +361,7 @@ async function updateCourse(id) {
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Update Guidelines
 
@@ -386,7 +386,7 @@ async function updateCourse(id) {
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Updating Documents Summary
 

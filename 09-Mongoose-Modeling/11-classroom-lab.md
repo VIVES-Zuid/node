@@ -1,4 +1,4 @@
-# 🧪 Lab & Assignment
+# 🧪 Classroom Assignment
 
 > **Practice what you've learned**
 
@@ -10,8 +10,10 @@ All code examples from this chapter are available:
 
 ### 📁 Files Available
 
+https://github.com/MilanVives/NodeVivesFiles
+
 - `referencing.js` - Working with referenced documents
-- `embedding.js` - Working with embedded documents  
+- `embedding.js` - Working with embedded documents
 - `objectids.js` - Understanding and using ObjectIDs
 
 ---
@@ -38,11 +40,11 @@ graph TD
     B -->|1:Few| C[Consider Embedding]
     B -->|1:Many| D[Consider Context]
     B -->|Many:Many| E[Use Referencing]
-    
+
     D --> F{Read or Write Heavy?}
     F -->|Read| C
     F -->|Write| E
-    
+
     style A fill:#4299e1,stroke:#2c5282,color:#fff
     style C fill:#48bb78,stroke:#2f855a,color:#fff
     style E fill:#ed8936,stroke:#c05621,color:#fff
@@ -53,6 +55,7 @@ graph TD
 ### 2️⃣ Working with References
 
 Remember to:
+
 - ✅ Define `type: mongoose.Schema.Types.ObjectId`
 - ✅ Specify `ref: 'CollectionName'`
 - ✅ Use `populate()` to fetch referenced data
@@ -63,15 +66,13 @@ Remember to:
 const schema = new mongoose.Schema({
   field: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'OtherModel',
-    required: true
-  }
+    ref: "OtherModel",
+    required: true,
+  },
 });
 
 // Querying with population
-const data = await Model
-  .find()
-  .populate('field', 'name -_id');
+const data = await Model.find().populate("field", "name -_id");
 ```
 
 ---
@@ -79,6 +80,7 @@ const data = await Model
 ### 3️⃣ Working with Embedded Documents
 
 Remember to:
+
 - ✅ Embed the schema directly
 - ✅ Save only the parent document
 - ✅ Use dot notation for updates
@@ -88,19 +90,19 @@ Remember to:
 // Example structure
 const subSchema = new mongoose.Schema({
   name: String,
-  value: Number
+  value: Number,
 });
 
 const mainSchema = new mongoose.Schema({
   embedded: {
     type: subSchema,
-    required: true
-  }
+    required: true,
+  },
 });
 
 // Updating embedded documents
 await Model.findByIdAndUpdate(id, {
-  $set: { 'embedded.name': 'New Name' }
+  $set: { "embedded.name": "New Name" },
 });
 ```
 
@@ -109,6 +111,7 @@ await Model.findByIdAndUpdate(id, {
 ### 4️⃣ Arrays of Subdocuments
 
 Remember to:
+
 - ✅ Use array syntax `[schema]`
 - ✅ Use `push()` to add items
 - ✅ Use `pull()` or `splice()` to remove
@@ -117,7 +120,7 @@ Remember to:
 ```javascript
 // Example structure
 const schema = new mongoose.Schema({
-  items: [itemSchema]
+  items: [itemSchema],
 });
 
 // Operations
@@ -132,22 +135,27 @@ await doc.save();
 ### 5️⃣ Using Transactions
 
 Remember to:
-- ✅ Initialize Fawn with mongoose
-- ✅ Chain all related operations
-- ✅ Use `.run()` to execute
-- ✅ Wrap in try-catch for error handling
+
+- ✅ Start a session with `mongoose.startSession()`
+- ✅ Call `session.startTransaction()` before any operations
+- ✅ Pass `{ session }` to **every** operation inside the transaction
+- ✅ Use `commitTransaction()` on success, `abortTransaction()` on failure
+- ✅ Always call `session.endSession()` in a `finally` block
 
 ```javascript
-const Fawn = require('fawn');
-Fawn.init(mongoose);
+const session = await mongoose.startSession();
+session.startTransaction();
 
 try {
-  await new Fawn.Task()
-    .save('collection1', doc1)
-    .update('collection2', query, update)
-    .run();
-} catch(ex) {
-  // Handle error
+  await doc1.save({ session });
+  await Model2.updateOne(query, update, { session });
+
+  await session.commitTransaction();
+} catch (ex) {
+  await session.abortTransaction();
+  throw ex;
+} finally {
+  session.endSession();
 }
 ```
 
@@ -159,7 +167,7 @@ try {
 
 - [ ] All required fields are properly validated
 - [ ] Appropriate data modeling approach chosen (reference vs embed)
-- [ ] Transactions used where data consistency is critical
+- [ ] Native MongoDB transactions used where data consistency is critical (session passed to every operation)
 - [ ] Error handling implemented
 - [ ] Code follows the comments/instructions
 
@@ -189,14 +197,14 @@ try {
 
 By completing this assignment, you should be able to:
 
-| Objective | Skills |
-|-----------|--------|
-| 🔗 **Referencing** | Create and query referenced documents |
-| 📦 **Embedding** | Work with subdocuments effectively |
-| 🎭 **Hybrid** | Combine approaches when beneficial |
-| 🆔 **ObjectIDs** | Generate, validate, and use ObjectIDs |
-| 💳 **Transactions** | Ensure data consistency |
-| 📚 **Arrays** | Manage arrays of subdocuments |
+| Objective           | Skills                                |
+| ------------------- | ------------------------------------- |
+| 🔗 **Referencing**  | Create and query referenced documents |
+| 📦 **Embedding**    | Work with subdocuments effectively    |
+| 🎭 **Hybrid**       | Combine approaches when beneficial    |
+| 🆔 **ObjectIDs**    | Generate, validate, and use ObjectIDs |
+| 💳 **Transactions** | Ensure data consistency               |
+| 📚 **Arrays**       | Manage arrays of subdocuments         |
 
 ---
 
@@ -206,18 +214,18 @@ By completing this assignment, you should be able to:
 
 ```javascript
 // Don't save subdocuments independently
-await course.author.save();  // Won't work!
+await course.author.save(); // Won't work!
 
 // Don't forget to populate when needed
-const courses = await Course.find();  // Only IDs
-console.log(courses[0].author.name);  // undefined
+const courses = await Course.find(); // Only IDs
+console.log(courses[0].author.name); // undefined
 
 // Don't use wrong reference type
-author: String  // Wrong!
-author: mongoose.Schema.Types.ObjectId  // Correct!
+author: String; // Wrong!
+author: mongoose.Schema.Types.ObjectId; // Correct!
 
 // Don't forget error handling
-await doc.save();  // What if it fails?
+await doc.save(); // What if it fails?
 ```
 
 ---
@@ -270,7 +278,6 @@ If you want to extend your learning:
 
 - [Mongoose Documentation](https://mongoosejs.com/docs/)
 - [MongoDB Manual](https://docs.mongodb.com/manual/)
-- [Fawn Package](https://www.npmjs.com/package/fawn)
 
 ### Key Sections to Review
 
@@ -285,12 +292,12 @@ If you want to extend your learning:
 
 Your assignment will be evaluated on:
 
-| Criteria | Weight |
-|----------|--------|
-| **Correctness** | 40% |
-| **Code Quality** | 30% |
-| **Best Practices** | 20% |
-| **Error Handling** | 10% |
+| Criteria           | Weight |
+| ------------------ | ------ |
+| **Correctness**    | 40%    |
+| **Code Quality**   | 30%    |
+| **Best Practices** | 20%    |
+| **Error Handling** | 10%    |
 
 ---
 
@@ -311,7 +318,7 @@ If you get stuck:
 Remember:
 
 > **"Choose the right tool for the job"**
-> 
+>
 > - Use **referencing** for flexibility and data that changes frequently
 > - Use **embedding** for performance and data that's always accessed together
 > - Use **hybrid** when you need the best of both worlds

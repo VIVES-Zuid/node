@@ -14,7 +14,7 @@ Delete one or many documents
 
 ## 🗑️ Delete Methods
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Available Methods
 
@@ -37,7 +37,7 @@ Delete one or many documents
 
 ## 🎯 Delete One Document
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using deleteOne()
 
@@ -67,7 +67,7 @@ removeCourse('605b9bed4dfe11d32a7548f1');
 
 ## 🔥 Delete Many Documents
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### Using deleteMany()
 
@@ -109,7 +109,7 @@ async function removeUnpublished() {
 
 ## 🔙 Delete and Return Document
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using findByIdAndRemove()
 
@@ -148,7 +148,7 @@ removeCourse('605b9bed4dfe11d32a7548f1');
 
 ## 🔍 Check Before Delete
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Safe Deletion Pattern
 
@@ -183,7 +183,7 @@ removeCourse('605b9bed4dfe11d32a7548f1');
 
 ## ⚠️ Error Handling
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Handle Deletion Errors
 
@@ -221,7 +221,7 @@ Always wrap delete operations in try/catch!
 
 ## 🎨 Delete vs Remove
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Method Names
 
@@ -254,7 +254,7 @@ await Course.findByIdAndDelete(id);
 
 ## 💡 Soft Delete Pattern
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Alternative to Hard Delete
 
@@ -300,7 +300,7 @@ async function getActiveCourses() {
 
 ## 📊 Delete with Conditions
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Complex Filters
 
@@ -343,7 +343,7 @@ async function deleteByTags(tags) {
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Delete Guidelines
 
@@ -393,7 +393,7 @@ async function deleteByTags(tags) {
 
 ## 📝 Assignment & Resources
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### GitHub Classroom Lab
 

@@ -9,7 +9,8 @@
 ### Starter Files
 
 📁 **Available on GitHub:**
-- `embedding.js`
+
+- `embedding.js` https://github.com/MilanVives/NodeVivesFiles/blob/main/embedding.js
 
 ---
 
@@ -21,18 +22,21 @@
 const authorSchema = new mongoose.Schema({
   name: String,
   bio: String,
-  website: String
+  website: String,
 });
 
-const Author = mongoose.model('Author', authorSchema);
+const Author = mongoose.model("Author", authorSchema);
 ```
 
 ### Course Schema (Before Embedding)
 
 ```javascript
-const Course = mongoose.model('Course', new mongoose.Schema({
-  name: String
-}));
+const Course = mongoose.model(
+  "Course",
+  new mongoose.Schema({
+    name: String,
+  }),
+);
 ```
 
 ---
@@ -42,18 +46,21 @@ const Course = mongoose.model('Course', new mongoose.Schema({
 ### Updated Course Schema
 
 ```javascript
-const Course = mongoose.model('Course', new mongoose.Schema({
-  name: String,
-  author: authorSchema  // 📦 Embed the entire schema
-}));
+const Course = mongoose.model(
+  "Course",
+  new mongoose.Schema({
+    name: String,
+    author: authorSchema, // 📦 Embed the entire schema
+  }),
+);
 ```
 
 ### 🔑 Key Difference
 
-| Approach | Schema Definition |
-|----------|------------------|
+| Approach        | Schema Definition                      |
+| --------------- | -------------------------------------- |
 | **Referencing** | `type: mongoose.Schema.Types.ObjectId` |
-| **Embedding** | `authorSchema` (the schema itself) |
+| **Embedding**   | `authorSchema` (the schema itself)     |
 
 ---
 
@@ -65,15 +72,15 @@ const Course = mongoose.model('Course', new mongoose.Schema({
 async function createCourse(name, author) {
   const course = new Course({
     name,
-    author
+    author,
   });
-  
+
   const result = await course.save();
   console.log(result);
 }
 
 // Create course with embedded author
-createCourse('Node Course', new Author({ name: 'Vives' }));
+createCourse("Node Course", new Author({ name: "Vives" }));
 ```
 
 ### Output
@@ -113,12 +120,12 @@ A **subdocument** is a document embedded within another document. It has most do
 ```javascript
 async function updateAuthor(courseId) {
   const course = await Course.findById(courseId);
-  course.author.name = 'M. Dima';
-  course.save();  // ⚠️ Save parent, not subdocument!
+  course.author.name = "M. Dima";
+  await course.save(); // ⚠️ Save parent, not subdocument!
   // course.author.save() does NOT exist!
 }
 
-updateAuthor('60798f05a3a949f04af32ab6');
+updateAuthor("60798f05a3a949f04af32ab6");
 ```
 
 ---
@@ -147,17 +154,15 @@ Update without querying first using `findByIdAndUpdate()`:
 
 ```javascript
 async function updateAuthor(courseId) {
-  const course = await Course.findByIdAndUpdate(
-    { _id: courseId },
-    {
-      $set: {
-        'author.name': 'M. Dima'  // 📝 Dot notation for nested property
-      }
-    }
-  );
+  // findByIdAndUpdate takes the id directly as first argument (not a filter object)
+  const course = await Course.findByIdAndUpdate(courseId, {
+    $set: {
+      "author.name": "M. Dima", // 📝 Dot notation for nested property
+    },
+  });
 }
 
-updateAuthor('60798f05a3a949f04af32ab6');
+updateAuthor("60798f05a3a949f04af32ab6");
 ```
 
 ---
@@ -172,9 +177,9 @@ async function removeAuthorProperty(courseId) {
     { _id: courseId },
     {
       $unset: {
-        'author': ''  // 🗑️ Remove entire author subdocument
-      }
-    }
+        author: "", // 🗑️ Remove entire author subdocument
+      },
+    },
   );
 }
 ```
@@ -186,22 +191,28 @@ async function removeAuthorProperty(courseId) {
 ### Current State
 
 ```javascript
-const Course = mongoose.model('Course', new mongoose.Schema({
-  name: String,
-  author: authorSchema
-}));
+const Course = mongoose.model(
+  "Course",
+  new mongoose.Schema({
+    name: String,
+    author: authorSchema,
+  }),
+);
 ```
 
 ### Make Author Required
 
 ```javascript
-const Course = mongoose.model('Course', new mongoose.Schema({
-  name: String,
-  author: {
-    type: authorSchema,
-    required: true  // ✅ Author is now required
-  }
-}));
+const Course = mongoose.model(
+  "Course",
+  new mongoose.Schema({
+    name: String,
+    author: {
+      type: authorSchema,
+      required: true, // ✅ Author is now required
+    },
+  }),
+);
 ```
 
 ---
@@ -214,10 +225,10 @@ If you want specific **author properties** to be required:
 const authorSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true  // ✅ Name is required in author
+    required: true, // ✅ Name is required in author
   },
   bio: String,
-  website: String
+  website: String,
 });
 ```
 
@@ -226,40 +237,44 @@ const authorSchema = new mongoose.Schema({
 ## 📊 Complete Example
 
 ```javascript
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost/playground')
-  .then(() => console.log('Connected to MongoDB...'))
-  .catch(err => console.error('Could not connect...', err));
+mongoose
+  .connect("mongodb://localhost/playground")
+  .then(() => console.log("Connected to MongoDB..."))
+  .catch((err) => console.error("Could not connect...", err));
 
 // Author Schema
 const authorSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   bio: String,
-  website: String
+  website: String,
 });
 
-const Author = mongoose.model('Author', authorSchema);
+const Author = mongoose.model("Author", authorSchema);
 
 // Course Schema with Embedded Author
-const Course = mongoose.model('Course', new mongoose.Schema({
-  name: String,
-  author: {
-    type: authorSchema,
-    required: true
-  }
-}));
+const Course = mongoose.model(
+  "Course",
+  new mongoose.Schema({
+    name: String,
+    author: {
+      type: authorSchema,
+      required: true,
+    },
+  }),
+);
 
 // Create Course
 async function createCourse(name, author) {
   const course = new Course({
     name,
-    author
+    author,
   });
-  
+
   const result = await course.save();
   console.log(result);
 }
@@ -267,24 +282,21 @@ async function createCourse(name, author) {
 // Update Author (Query First)
 async function updateAuthor(courseId) {
   const course = await Course.findById(courseId);
-  course.author.name = 'M. Dima';
+  course.author.name = "M. Dima";
   await course.save();
 }
 
 // Update Author (Update First)
 async function updateAuthorDirect(courseId) {
-  await Course.findByIdAndUpdate(
-    { _id: courseId },
-    {
-      $set: {
-        'author.name': 'M. Dima'
-      }
-    }
-  );
+  await Course.findByIdAndUpdate(courseId, {
+    $set: {
+      "author.name": "M. Dima",
+    },
+  });
 }
 
 // Usage
-createCourse('Node Course', new Author({ name: 'Vives' }));
+createCourse("Node Course", new Author({ name: "Vives" }));
 ```
 
 ---
@@ -298,11 +310,11 @@ graph TB
     A1[Author]
     C1 -.->|author_id| A1
     end
-    
+
     subgraph "Embedded Documents"
-    C2[Course<br/>┗━ author: {...}]
+    C2["Course<br/>└ author: embedded"]
     end
-    
+
     style C1 fill:#4299e1,stroke:#2c5282,color:#fff
     style A1 fill:#48bb78,stroke:#2f855a,color:#fff
     style C2 fill:#ed8936,stroke:#c05621,color:#fff
@@ -312,25 +324,27 @@ graph TB
 
 ## 💡 Key Takeaways
 
-| Aspect | Details |
-|--------|---------|
-| 📦 **Schema** | Use schema directly (not ObjectId) |
-| 🆔 **IDs** | Subdocuments get automatic `_id` |
-| 💾 **Saving** | Only save parent document |
-| ✅ **Validation** | Works on subdocuments |
-| 🔧 **Updates** | Use dot notation or query first |
+| Aspect            | Details                            |
+| ----------------- | ---------------------------------- |
+| 📦 **Schema**     | Use schema directly (not ObjectId) |
+| 🆔 **IDs**        | Subdocuments get automatic `_id`   |
+| 💾 **Saving**     | Only save parent document          |
+| ✅ **Validation** | Works on subdocuments              |
+| 🔧 **Updates**    | Use dot notation or query first    |
 
 ---
 
 ## ⚖️ When to Use Embedding?
 
 ✅ **Use embedding when:**
+
 - Subdocument is always accessed with parent
 - Subdocument is small and bounded
 - Read operations are frequent
 - Data rarely changes
 
 ❌ **Avoid embedding when:**
+
 - Subdocument can grow unbounded
 - Subdocument needs independent access
 - Data changes frequently

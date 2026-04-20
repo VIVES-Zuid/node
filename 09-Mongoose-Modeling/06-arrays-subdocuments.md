@@ -135,8 +135,9 @@ async function removeAuthor(courseId, authorId) {
   const course = await Course.findById(courseId);
   
   // Find index of author to remove
+  // Use .toString() when comparing ObjectIDs — == can be unreliable
   const index = course.authors.findIndex(
-    (obj) => obj._id == authorId
+    (obj) => obj._id.toString() === authorId.toString()
   );
   
   // Remove from array
@@ -336,21 +337,28 @@ course.authors[0].name = 'New';  // ⚠️ Fragile
 
 ## ⚠️ Important Notes
 
-### Version Differences
+### Subdocuments Cannot Be Saved Independently
 
 ```javascript
-// Current version (Mongoose 6+)
-async function removeAuthor(courseId, authorId) {
-  const course = await Course.findById(courseId);
-  course.authors.pull(authorId);
-  await course.save();  // ✅ Save course
-}
+// ❌ This throws an error — subdocuments are not standalone documents
+await course.authors[0].save();
 
-// Older versions (Mongoose 5)
-async function removeAuthor(courseId, authorId) {
-  const author = await course.authors.id(authorId);
-  await author.save();  // ⚠️ Used to work in older versions
-}
+// ✅ Always save the parent document
+course.authors[0].name = 'Updated Name';
+await course.save();
+```
+
+### Removing: pull() vs splice()
+
+```javascript
+// ✅ Preferred — Mongoose tracks the change automatically
+course.authors.pull(authorId);
+
+// ✅ Also works — find the index first, then splice
+const index = course.authors.findIndex(
+  (obj) => obj._id.toString() === authorId.toString()
+);
+course.authors.splice(index, 1);
 ```
 
 ---

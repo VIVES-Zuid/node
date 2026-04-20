@@ -6,9 +6,9 @@
 
 ## ⚠️ The Problem
 
-### No Automatic Rollback in MongoDB
+### No Automatic Rollback Without Transactions
 
-Unlike traditional SQL databases, MongoDB **doesn't automatically roll back** failed transactions.
+If two operations must succeed together (or both fail), plain sequential `await` calls are not safe.
 
 ```mermaid
 graph LR
@@ -30,103 +30,121 @@ graph LR
 
 ```javascript
 // Step 1: Create rental record
-const rental = new Rental({
-  book: bookId,
-  customer: customerId,
-  dateOut: Date.now()
-});
-await rental.save();  // ✅ Success
+const rental = new Rental({ book: bookId, customer: customerId, dateOut: Date.now() });
+await rental.save();         // ✅ Succeeds
 
 // Step 2: Decrease book stock
 const book = await Book.findById(bookId);
 book.numberInStock--;
-await book.save();  // ❌ What if this fails?
+await book.save();           // ❌ What if this fails?
 ```
 
-**Problem:** If step 2 fails, the rental exists but the stock wasn't decreased!
+**Problem:** If step 2 fails, the rental exists but the stock was never decreased!
 
 ---
 
-## 💡 The Solution: Fawn
+## 💡 The Solution: Native MongoDB Transactions
 
-**Fawn** is a package that provides **transaction-like behavior** for MongoDB.
+MongoDB 4.0+ supports **multi-document transactions** using **sessions**. This is the recommended approach for all modern MongoDB deployments.
 
-### Installation
+> **Requirement:** Transactions require a **replica set** (or sharded cluster).  
+> - **MongoDB Atlas** always runs as a replica set — no extra setup needed.  
+> - **Local development:** use Docker (easiest) or start `mongod` with `--replSet rs0`.
+
+### 🐳 Local Setup with Docker (Recommended)
+
+**Option A — single `docker run` command:**
 
 ```bash
-npm install fawn
+docker run -d \
+  --name mongodb \
+  -p 27017:27017 \
+  mongo:latest --replSet rs0
 ```
 
-### Documentation
+Then initialise the replica set once (only needed the very first time):
 
-📚 [https://www.npmjs.com/package/fawn](https://www.npmjs.com/package/fawn)
+```bash
+docker exec -it mongodb mongosh --eval "rs.initiate()"
+```
 
----
+Restart the container anytime with:
 
-## 🔧 Using Fawn
-
-### Initialize Fawn
-
-```javascript
-const Fawn = require('fawn');
-const mongoose = require('mongoose');
-
-// Initialize Fawn with mongoose
-Fawn.init(mongoose);
+```bash
+docker start mongodb
 ```
 
 ---
 
-### Create a Transaction Task
+**Option B — Docker Compose** (better for projects that already have a `docker-compose.yml`):
+
+```yaml
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    command: --replSet rs0
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+```
+
+Start it with:
+
+```bash
+docker compose up -d
+```
+
+Then initialise once:
+
+```bash
+docker compose exec mongodb mongosh --eval "rs.initiate()"
+```
+
+Your Mongoose connection string stays the same as without a replica set:
 
 ```javascript
-const Fawn = require('fawn');
+mongoose.connect('mongodb://localhost:27017/playground');
+```
+
+---
+
+**Option C — bare `mongod`** (if you have MongoDB installed locally):
+
+```bash
+mongod --replSet rs0
+# in a second terminal:
+mongosh --eval "rs.initiate()"
+```
+
+---
+
+## 🔧 Using Native Transactions
+
+### The Pattern
+
+```javascript
+const session = await mongoose.startSession();
+session.startTransaction();
 
 try {
-  new Fawn.Task()
-    .save('rentals', rental)                    // Step 1: Save rental
-    .update('books', { _id: book._id }, {       // Step 2: Update book
-      $inc: { numberInStock: -1 }
-    })
-    .run();                                     // Execute transaction
-    
-  res.send(rental);
-} catch(ex) {
-  res.status(500).send('Something failed.');
+  // All operations must receive { session }
+  await Operation1({ session });
+  await Operation2({ session });
+
+  await session.commitTransaction();   // Persist all changes
+} catch (ex) {
+  await session.abortTransaction();    // Roll back all changes
+  throw ex;
+} finally {
+  session.endSession();                // Always release the session
 }
 ```
 
----
-
-## 🎯 How It Works
-
-```mermaid
-sequenceDiagram
-    participant App
-    participant Fawn
-    participant MongoDB
-    
-    App->>Fawn: Create Task
-    App->>Fawn: Add save operation
-    App->>Fawn: Add update operation
-    App->>Fawn: Run task
-    
-    Fawn->>MongoDB: Execute save
-    alt Save successful
-        Fawn->>MongoDB: Execute update
-        alt Update successful
-            Fawn-->>App: All operations succeeded
-        else Update failed
-            Fawn->>MongoDB: Rollback save
-            Fawn-->>App: Transaction failed (rolled back)
-        end
-    else Save failed
-        Fawn-->>App: Transaction failed
-    end
-    
-    style Fawn fill:#4299e1,stroke:#2c5282,color:#fff
-    style MongoDB fill:#48bb78,stroke:#2f855a,color:#fff
-```
+> **Critical:** pass `{ session }` to **every** operation inside the transaction — missing it on one call silently excludes that operation from the transaction scope.
 
 ---
 
@@ -138,86 +156,67 @@ sequenceDiagram
 const mongoose = require('mongoose');
 
 const rentalSchema = new mongoose.Schema({
-  customer: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Customer',
-    required: true
-  },
-  book: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Book',
-    required: true
-  },
-  dateOut: {
-    type: Date,
-    required: true,
-    default: Date.now
-  },
+  customer: { type: mongoose.Schema.Types.ObjectId, ref: 'Customer', required: true },
+  book:     { type: mongoose.Schema.Types.ObjectId, ref: 'Book',     required: true },
+  dateOut:  { type: Date, required: true, default: Date.now },
   dateReturned: Date,
-  rentalFee: Number
+  rentalFee: Number,
 });
-
 const Rental = mongoose.model('Rental', rentalSchema);
 
 const bookSchema = new mongoose.Schema({
-  title: String,
-  numberInStock: Number
+  title:         String,
+  numberInStock: Number,
 });
-
 const Book = mongoose.model('Book', bookSchema);
 ```
 
 ---
 
-### Without Fawn (Problematic)
+### Without Transactions (Problematic)
 
 ```javascript
 async function createRental(customerId, bookId) {
-  // ❌ No transaction protection
-  const rental = new Rental({
-    customer: customerId,
-    book: bookId,
-    dateOut: Date.now()
-  });
-  
-  await rental.save();  // What if next operation fails?
-  
+  // ❌ No transaction — crash between saves = inconsistent data
+  const rental = new Rental({ customer: customerId, book: bookId, dateOut: Date.now() });
+  await rental.save();
+
   const book = await Book.findById(bookId);
   book.numberInStock--;
-  await book.save();  // Crash here = inconsistent data!
-  
+  await book.save();  // If this crashes, the rental still exists
+
   return rental;
 }
 ```
 
 ---
 
-### With Fawn (Protected)
+### With Native Transactions (Safe)
 
 ```javascript
-const Fawn = require('fawn');
-Fawn.init(mongoose);
-
 async function createRental(customerId, bookId) {
-  const rental = new Rental({
-    customer: customerId,
-    book: bookId,
-    dateOut: Date.now()
-  });
-  
+  const session = await mongoose.startSession();
+  session.startTransaction();
+
   try {
-    // ✅ Transaction-protected
-    await new Fawn.Task()
-      .save('rentals', rental)
-      .update('books', { _id: bookId }, {
-        $inc: { numberInStock: -1 }
-      })
-      .run();
-    
+    // Both operations share the same session
+    const rental = new Rental({ customer: customerId, book: bookId, dateOut: Date.now() });
+    await rental.save({ session });
+
+    await Book.updateOne(
+      { _id: bookId },
+      { $inc: { numberInStock: -1 } },
+      { session }
+    );
+
+    await session.commitTransaction();
     return rental;
-  } catch(ex) {
-    console.error('Transaction failed:', ex);
-    throw new Error('Could not create rental');
+
+  } catch (ex) {
+    await session.abortTransaction();   // Roll back both operations
+    throw ex;
+  } finally {
+    session.endSession();
   }
 }
 ```
@@ -226,171 +225,101 @@ async function createRental(customerId, bookId) {
 
 ## 🔄 Multiple Operations
 
-### Chain Multiple Updates
+### Chain as Many Operations as Needed
 
 ```javascript
-try {
-  await new Fawn.Task()
-    // Create rental
-    .save('rentals', rental)
-    
-    // Decrease book stock
-    .update('books', { _id: book._id }, {
-      $inc: { numberInStock: -1 }
-    })
-    
-    // Increase customer rental count
-    .update('customers', { _id: customer._id }, {
-      $inc: { totalRentals: 1 }
-    })
-    
-    // Add to rental history
-    .update('customers', { _id: customer._id }, {
-      $push: { rentalHistory: rental._id }
-    })
-    
-    .run();  // All or nothing!
-    
-} catch(ex) {
-  console.error('Transaction failed:', ex);
-}
-```
+async function placeOrder(userId, productId, quantity) {
+  const session = await mongoose.startSession();
+  session.startTransaction();
 
----
-
-## 🎭 Operations Supported
-
-### Available Operations
-
-| Operation | Purpose | Example |
-|-----------|---------|---------|
-| **save** | Insert document | `.save('collection', doc)` |
-| **update** | Update document | `.update('collection', query, update)` |
-| **remove** | Delete document | `.remove('collection', query)` |
-
----
-
-### Save Operation
-
-```javascript
-new Fawn.Task()
-  .save('users', {
-    name: 'John Doe',
-    email: 'john@example.com'
-  })
-  .run();
-```
-
----
-
-### Update Operation
-
-```javascript
-new Fawn.Task()
-  .update('users', 
-    { email: 'john@example.com' },  // Query
-    { $set: { name: 'John Smith' } } // Update
-  )
-  .run();
-```
-
----
-
-### Remove Operation
-
-```javascript
-new Fawn.Task()
-  .remove('users', {
-    email: 'john@example.com'
-  })
-  .run();
-```
-
----
-
-## 🚨 Error Handling
-
-### Proper Error Handling
-
-```javascript
-async function createRental(req, res) {
-  const rental = new Rental({
-    customer: req.body.customerId,
-    book: req.body.bookId,
-    dateOut: Date.now()
-  });
-  
   try {
-    await new Fawn.Task()
-      .save('rentals', rental)
-      .update('books', { _id: rental.book }, {
-        $inc: { numberInStock: -1 }
-      })
-      .run();
-    
-    res.send(rental);
-  } catch(ex) {
-    console.error('Rental creation failed:', ex);
-    res.status(500).send('Could not create rental. Please try again.');
+    // 1. Create the order
+    const order = new Order({ userId, productId, quantity });
+    await order.save({ session });
+
+    // 2. Decrease product stock
+    await Product.updateOne(
+      { _id: productId },
+      { $inc: { stock: -quantity } },
+      { session }
+    );
+
+    // 3. Record in user's order history
+    await User.updateOne(
+      { _id: userId },
+      { $push: { orders: order._id } },
+      { session }
+    );
+
+    await session.commitTransaction();
+    return order;
+
+  } catch (ex) {
+    await session.abortTransaction();   // All or nothing!
+    throw ex;
+  } finally {
+    session.endSession();
   }
 }
 ```
 
 ---
 
-## ⚡ Performance Considerations
+## 🎯 How It Works
 
-### Impact
-
-| Aspect | Impact |
-|--------|--------|
-| **Speed** | Slightly slower than individual operations |
-| **Safety** | Much higher data consistency |
-| **Complexity** | Moderate learning curve |
-| **Reliability** | Automatic rollback on failure |
-
-**Verdict:** The safety benefits outweigh the minimal performance cost!
-
----
-
-## 🆚 Fawn vs Native Transactions
-
-### MongoDB 4.0+ Native Transactions
-
-MongoDB 4.0+ supports **native transactions** (replica sets required):
-
-```javascript
-const session = await mongoose.startSession();
-session.startTransaction();
-
-try {
-  await rental.save({ session });
-  await Book.updateOne(
-    { _id: bookId },
-    { $inc: { numberInStock: -1 } },
-    { session }
-  );
-  
-  await session.commitTransaction();
-} catch(ex) {
-  await session.abortTransaction();
-  throw ex;
-} finally {
-  session.endSession();
-}
+```mermaid
+sequenceDiagram
+    participant App
+    participant Mongoose
+    participant MongoDB
+    
+    App->>Mongoose: startSession() + startTransaction()
+    App->>Mongoose: save(rental, { session })
+    Mongoose->>MongoDB: Write to staging area (not committed)
+    App->>Mongoose: updateOne(book, { session })
+    Mongoose->>MongoDB: Write to staging area (not committed)
+    App->>Mongoose: commitTransaction()
+    Mongoose->>MongoDB: Commit both writes atomically
+    MongoDB-->>App: Both changes visible
+    
+    note over App,MongoDB: If any step throws, abortTransaction() undoes all staged writes
 ```
 
 ---
 
-### Comparison
+## 🚨 Error Handling in Express
 
-| Feature | Fawn | Native Transactions |
-|---------|------|-------------------|
-| **MongoDB Version** | Any | 4.0+ |
-| **Replica Set** | Not required | Required |
-| **API** | Simple | More complex |
-| **Performance** | Good | Better |
-| **Learning Curve** | Easy | Moderate |
+```javascript
+router.post('/', async (req, res) => {
+  const session = await mongoose.startSession();
+  session.startTransaction();
+
+  try {
+    const rental = new Rental({
+      customer: req.body.customerId,
+      book:     req.body.bookId,
+      dateOut:  Date.now(),
+    });
+
+    await rental.save({ session });
+
+    await Book.updateOne(
+      { _id: rental.book },
+      { $inc: { numberInStock: -1 } },
+      { session }
+    );
+
+    await session.commitTransaction();
+    res.send(rental);
+
+  } catch (ex) {
+    await session.abortTransaction();
+    res.status(500).send('Could not create rental. Please try again.');
+  } finally {
+    session.endSession();
+  }
+});
+```
 
 ---
 
@@ -398,37 +327,62 @@ try {
 
 ### ✅ Use transactions when:
 
-- Multiple collections need to be updated together
-- Data consistency is critical
-- Failure in one operation should undo others
+- Multiple collections must be updated together
+- A failure in one step should undo all previous steps
 - Financial or inventory operations
+- Data consistency is critical
+
+### ❌ Transactions are NOT needed when:
+
+- Only updating a single document (MongoDB is always atomic at the single-document level)
+- Inserting independent records that don't need to stay in sync
 
 ---
 
-### Examples:
+### Examples
 
 ```javascript
-// ✅ E-commerce order
-new Fawn.Task()
-  .save('orders', order)
-  .update('products', { _id: productId }, { $inc: { stock: -1 } })
-  .update('users', { _id: userId }, { $push: { orders: orderId } })
-  .run();
+// ✅ Bank transfer — both updates must succeed together
+const session = await mongoose.startSession();
+session.startTransaction();
+try {
+  await Account.updateOne({ _id: fromId }, { $inc: { balance: -amount } }, { session });
+  await Account.updateOne({ _id: toId },   { $inc: { balance:  amount } }, { session });
+  await session.commitTransaction();
+} catch (ex) {
+  await session.abortTransaction();
+} finally {
+  session.endSession();
+}
 
-// ✅ Bank transfer
-new Fawn.Task()
-  .update('accounts', { _id: fromAccount }, { $inc: { balance: -amount } })
-  .update('accounts', { _id: toAccount }, { $inc: { balance: amount } })
-  .save('transactions', transaction)
-  .run();
-
-// ✅ User registration
-new Fawn.Task()
-  .save('users', user)
-  .save('profiles', profile)
-  .save('settings', defaultSettings)
-  .run();
+// ✅ User registration — user + profile must both exist or neither
+const session = await mongoose.startSession();
+session.startTransaction();
+try {
+  const user    = await User.create([{ name: 'John' }], { session });
+  const profile = await Profile.create([{ userId: user[0]._id }], { session });
+  await session.commitTransaction();
+} catch (ex) {
+  await session.abortTransaction();
+} finally {
+  session.endSession();
+}
 ```
+
+> **Note:** When using `Model.create()` inside a transaction, pass the data as an **array** (e.g., `[{ ... }]`) — this is required for Mongoose to accept the `session` option in `create()`.
+
+---
+
+## ⚡ Performance Considerations
+
+| Aspect | Impact |
+|--------|--------|
+| **Speed** | Slightly slower than individual operations |
+| **Safety** | Much higher data consistency |
+| **Complexity** | Low — just wrap in session + try/catch/finally |
+| **Reliability** | Automatic rollback on any failure |
+
+**Verdict:** The safety benefits outweigh the minimal performance cost for any multi-document operation!
 
 ---
 
@@ -436,13 +390,13 @@ new Fawn.Task()
 
 | Concept | Detail |
 |---------|--------|
-| ⚠️ **Problem** | No automatic rollback in MongoDB |
-| 💳 **Solution** | Use Fawn for transactions |
-| 🔄 **All or Nothing** | All operations succeed or all roll back |
-| 📦 **Package** | `npm install fawn` |
-| 🔧 **Simple API** | Chain operations with `.save()`, `.update()`, `.remove()` |
-| ✅ **Use Cases** | Orders, transfers, multi-step operations |
+| ⚠️ **Problem** | Sequential `await` calls have no automatic rollback |
+| 💳 **Solution** | Native MongoDB transactions via `startSession()` |
+| 🔄 **All or Nothing** | All operations commit or all roll back |
+| 📌 **Pass session** | Every operation inside needs `{ session }` |
+| 🔚 **endSession()** | Always in `finally` — releases the session regardless of outcome |
+| ✅ **Use Cases** | Orders, transfers, registrations, any multi-step writes |
 
 ---
 
-[← Previous: MongoDB ObjectIDs](07-objectids.md) | [🏠 Home](../README.md) | [Next: Lab & Assignment →](09-lab.md)
+[← Previous: MongoDB ObjectIDs](07-objectids.md) | [🏠 Home](../README.md) | [Next: Recap →](09-recap.md)

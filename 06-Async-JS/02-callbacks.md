@@ -14,7 +14,7 @@ The original way to handle async operations
 
 ## 📖 What is a Callback?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Definition
 
@@ -37,7 +37,7 @@ Since async operations don't return immediately, we need a way to handle the res
 
 ## 🔧 Basic Callback Example
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Simple Callback
 
@@ -72,7 +72,7 @@ User { id: 1, gitHubUsername: 'MilanVives' }
 
 ## 🔗 Chaining Async Operations
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Multiple Async Calls
 
@@ -105,7 +105,7 @@ function getRepositories(username, callback) {
 
 ## 🔄 Nested Callbacks
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Chaining Example
 
@@ -150,7 +150,7 @@ Repos [ 'repo1', 'repo2', 'repo3' ]
 
 ## 🎄 Callback Hell (Christmas Tree Problem)
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### The Problem
 
@@ -188,7 +188,7 @@ This is called **"Callback Hell"** or the **"Christmas Tree Problem"**!
 
 ## 🆚 Synchronous vs Callback Hell
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### How It Could Look (Synchronous)
 
@@ -221,7 +221,7 @@ getUser(1, function(user) {
 
 ## 📝 Complete Callback Hell Example
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Full Code
 
@@ -266,7 +266,7 @@ function getCommits(repo, callback) {
 
 ## 🛠️ Solution 1: Named Functions
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Replace Anonymous with Named Functions
 
@@ -301,7 +301,7 @@ getCommits(repos[0], displayCommits);
 
 ## 🎁 Solution 2: Promises (Preview)
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### A Better Way
 
@@ -325,7 +325,7 @@ We'll learn about Promises in the next slide!
 
 ## 💡 Best Practices
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Callback Guidelines
 
@@ -349,7 +349,7 @@ Use **Promises** or **async/await** instead of callbacks for new projects!
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Callbacks Summary
 

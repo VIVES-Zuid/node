@@ -14,7 +14,7 @@ Find and filter your data
 
 ## 📖 Basic find() Method
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Get All Documents
 
@@ -55,7 +55,7 @@ getCourses();
 
 ## 🔍 Filtering Documents
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Filter by Field
 
@@ -84,7 +84,7 @@ Only returns courses where:
 
 ## 🎯 Query Methods
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Chainable Query Methods
 
@@ -122,7 +122,7 @@ const courses = await Course
 
 ## 🎨 Selecting Fields
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Include Specific Fields
 
@@ -160,7 +160,7 @@ const courses = await Course
 
 ## 🔢 Comparison Operators
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Available Operators
 
@@ -197,7 +197,7 @@ const courses = await Course
 
 ## 🔗 Logical Operators
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### OR Operator
 
@@ -233,7 +233,7 @@ const courses = await Course
 
 ## 🔤 Regular Expressions
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Text Pattern Matching
 
@@ -269,7 +269,7 @@ const courses = await Course
 
 ## 🔢 Counting Documents
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using .count()
 
@@ -302,7 +302,7 @@ Useful for pagination and statistics!
 
 ## 📄 Pagination
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using skip() and limit()
 
@@ -338,7 +338,7 @@ Formula: `skip((pageNumber - 1) * pageSize)`
 
 ## 🎯 findById() Method
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Find Single Document by ID
 
@@ -364,7 +364,7 @@ But `.findById()` is:
 
 ## ✨ Best Practice: run() Function
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Organized Code Structure
 
@@ -399,7 +399,7 @@ run();
 
 ## 💡 Best Practices
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; border-left: 5px solid #ff9800; color: #1a1a1a;">
 
 ### Querying Guidelines
 
@@ -423,7 +423,7 @@ run();
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Reading Documents Summary
 

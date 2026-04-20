@@ -14,7 +14,7 @@ The better way to handle async operations
 
 ## 📖 What is a Promise?
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Definition
 
@@ -41,7 +41,7 @@ A Promise can be in one of three states:
 
 ## 🏗️ Creating a Promise
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Basic Promise Structure
 
@@ -80,7 +80,7 @@ const p = new Promise((resolve, reject) => {
 
 ## 📥 Consuming a Promise
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Using .then() and .catch()
 
@@ -120,7 +120,7 @@ Result 1
 
 ## ❌ Handling Errors
 
-<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336;">
+<div style="background-color: #ffebee; padding: 25px; border-radius: 10px; border-left: 5px solid #f44336; color: #1a1a1a;">
 
 ### Using reject() and .catch()
 
@@ -154,7 +154,7 @@ err.stack    // Stack trace
 
 ## 🔄 Promise Lifecycle
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### State Transitions
 
@@ -181,7 +181,7 @@ graph LR
 
 ## 🔄 Converting Callbacks to Promises
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Before (Callback)
 
@@ -215,7 +215,7 @@ function getUser(id) {
 
 ## 🔗 Chaining Promises
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### From Callback Hell to Promise Chain
 
@@ -249,7 +249,7 @@ getUser(1)
 
 ## 📝 Complete Promise Example
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Full Code
 
@@ -298,7 +298,7 @@ function getCommits(repo) {
 
 ## ⚡ Parallel Promises with Promise.all()
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Running Promises Concurrently
 
@@ -336,7 +336,7 @@ Async operation 2...
 
 ## 🏁 Promise.race()
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### First One Wins
 
@@ -359,7 +359,7 @@ Returns the result of the **first** promise that completes!
 
 ## 🚀 Promise API Methods
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Quick Promise Creation
 
@@ -388,7 +388,7 @@ return Promise.resolve(data);
 
 ## 🔍 Promise Syntax Example
 
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Real-World Pattern
 
@@ -427,7 +427,7 @@ Still working on something else
 
 ## 💡 Best Practices
 
-<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50;">
+<div style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 5px solid #4caf50; color: #1a1a1a;">
 
 ### Promise Guidelines
 
@@ -450,7 +450,7 @@ Still working on something else
 
 ## 🎯 Key Takeaways
 
-<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ### Promises Summary
 

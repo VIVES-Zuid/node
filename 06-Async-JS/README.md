@@ -14,7 +14,7 @@ Learn callbacks, promises, and async/await
 
 ## 🤔 What You'll Learn
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 This chapter covers:
 
@@ -31,7 +31,7 @@ This chapter covers:
 
 ## 🔄 Synchronous vs Asynchronous
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Key Differences
 
@@ -64,7 +64,7 @@ This chapter covers:
 
 ## 🗂️ Chapter Slides
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 1. **[Synchronous vs Asynchronous](./01-sync-vs-async.md)** - Understanding async code
 2. **[Callbacks](./02-callbacks.md)** - Traditional async pattern
@@ -110,7 +110,7 @@ This chapter covers:
 
 By the end of this chapter, you will:
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ✅ Understand synchronous vs asynchronous code  
 ✅ Work with callbacks for async operations  
@@ -127,7 +127,7 @@ By the end of this chapter, you will:
 
 ## 🛠️ Common Async Operations
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### When to Use Async Code
 

@@ -14,7 +14,7 @@ Learn to persist data with MongoDB and Mongoose
 
 ## 🤔 What You'll Learn
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 This chapter covers:
 
@@ -32,7 +32,7 @@ This chapter covers:
 
 ## 🗄️ What is MongoDB?
 
-<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e8f5e9; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### NoSQL Document Database
 
@@ -69,7 +69,7 @@ This chapter covers:
 
 ## 🗂️ Chapter Slides
 
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 1. **[MongoDB & Mongoose Setup](./01-mongodb-setup.md)** - Connection and basics
 2. **[Schemas & Models](./02-schemas-models.md)** - Define document structure
@@ -117,7 +117,7 @@ This chapter covers:
 
 By the end of this chapter, you will:
 
-<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 10px; color: #1a1a1a;">
 
 ✅ Understand NoSQL vs SQL databases  
 ✅ Install and connect to MongoDB  
@@ -136,7 +136,7 @@ By the end of this chapter, you will:
 
 ## 🛠️ CRUD Operations
 
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
+<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### The Four Basic Operations
 
@@ -158,7 +158,7 @@ By the end of this chapter, you will:
 
 ## 🔍 Query Operators
 
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
+<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px; color: #1a1a1a;">
 
 ### Comparison Operators
 
