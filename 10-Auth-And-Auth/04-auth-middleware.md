@@ -1,14 +1,25 @@
-# 🛡️ Auth Middleware
+# Auth Middleware
 
 ## Protecting Routes with Authentication
 
-Let's create middleware to verify JWT tokens and protect our routes.
+We want certain endpoints to be accessible only by **authenticated users** (e.g., the POST route in `/routes/genres`).
+
+We could add the token check inside each route:
+
+```javascript
+router.post('/', async (req, res) => {
+  const token = req.header('x-auth-token');
+  // if no token: res.send(401)...
+});
+```
+
+But copying this logic into every route is repetitive. Instead we **extract it into a middleware function**.
 
 ---
 
-### 📝 Creating Auth Middleware
+### Creating Auth Middleware
 
-Create a new file: `middleware/auth.js`
+Create `middleware/auth.js`:
 
 ```javascript
 const jwt = require('jsonwebtoken');
@@ -30,7 +41,7 @@ module.exports = function (req, res, next) {
 
 ---
 
-### 🔍 How It Works
+### How It Works
 
 ```mermaid
 sequenceDiagram
@@ -60,24 +71,24 @@ sequenceDiagram
 
 ---
 
-### 🎯 Key Points
+### Key Points
 
-- 🔑 **Token in Header**: Looks for `x-auth-token` in request headers
-- ✅ **Verification**: Uses JWT secret to verify token validity
-- 📦 **Decoded Payload**: Adds decoded user data to `req.user`
-- ⚡ **Next Middleware**: Calls `next()` to continue to route handler
+- **Token in Header**: reads from the `x-auth-token` request header
+- **Verification**: uses the JWT secret to check the token's signature
+- **Decoded Payload**: the decoded data (containing `_id`) is attached to `req.user`
+- **next()**: passes control to the route handler if the token is valid
 
 ---
 
-### 📊 HTTP Status Codes
+### HTTP Status Codes
 
 | Status | Meaning | When Used |
 |--------|---------|-----------|
-| 🔴 **401** | Unauthorized | No token provided |
-| 🔴 **400** | Bad Request | Invalid token |
-| 🔴 **403** | Forbidden | Valid token, no permission |
-| 🟢 **200** | OK | Success |
+| **401** | Unauthorized | No token provided |
+| **400** | Bad Request | Invalid/malformed token |
+| **403** | Forbidden | Valid token, insufficient permissions |
+| **200** | OK | Success |
 
 ---
 
-[← Previous: Introduction](01-intro.md) | [🏠 Home](../README.md) | [Next: Protecting Routes →](03-protecting-routes.md)
+[← Previous: Login & JWT](03-login-and-jwt.md) | [🏠 Home](../README.md) | [Next: Protecting Routes →](05-protecting-routes.md)
