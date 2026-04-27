@@ -224,4 +224,4 @@ console.log(`Average rating: ${avg.toFixed(1)}`);
 
 ---
 
-[← Previous: Recap](09-recap.md) | [🏠 Home](../README.md) | [Next Chapter: Authentication & Authorization →](../10-Auth-And-Auth/01-intro.md)
+[← Previous: Recap](09-recap.md) | [🏠 Home](../README.md) | [Next Chapter: Github Classroom Lab →](./11-classroom-lab.md)
