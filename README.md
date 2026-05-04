@@ -303,6 +303,33 @@ Welcome to the **Node.js Course**! This comprehensive course will take you from 
 
 </div>
 
+---
+
+### 🚀 [Chapter 13: Deployment](./13-Deployment/01-introduction.md)
+
+<div style="background-color: #e0f7fa; padding: 20px; border-radius: 10px;">
+
+**Topics:**
+- Deployment Options Overview
+- Preparing for Production (env vars, NODE_ENV, security)
+- Linux VM on GCP / Azure / Oracle Cloud
+- PM2, Nginx & Keeping the Server Alive
+- Render & Railway (free PaaS)
+- Supabase (free PostgreSQL + Edge Functions)
+- Other Options: Fly.io, Koyeb, Vercel
+
+**Slides:**
+- [01 - Introduction](./13-Deployment/01-introduction.md)
+- [02 - Preparing for Production](./13-Deployment/02-production-prep.md)
+- [03 - Linux VM](./13-Deployment/03-linux-vm.md)
+- [04 - PM2 & Nginx](./13-Deployment/04-pm2-nginx.md)
+- [05 - Render & Railway](./13-Deployment/05-render-railway.md)
+- [06 - Supabase](./13-Deployment/06-supabase.md)
+- [07 - Other Options](./13-Deployment/07-other-options.md)
+- [08 - Lab Exercise](./13-Deployment/08-lab.md)
+
+</div>
+
 </div>
 
 ---
@@ -322,6 +349,7 @@ graph TD
     I --> J[10. Auth]
     J --> K[11. Error Handling]
     K --> L[12. Testing]
+    L --> M[13. Deployment]
     style A fill:#4caf50,stroke:#2e7d32,color:#fff
 ```
 
@@ -451,6 +479,7 @@ See **Toledo** for detailed grading criteria and project requirements.
 
 ### Latest Changes
 
+- **2026-05-04**: Chapter 13 (Deployment) created — VMs, PM2, Nginx, Render, Railway, Supabase, Fly.io
 - **2026-02-09**: Chapter 12 (Testing) created with Node.js test runner
 - **2026-02-09**: Chapter 11 (Error Handling) created with best practices
 - **2026-02-09**: Chapter 10 (Authentication & Authorization) converted to markdown format
