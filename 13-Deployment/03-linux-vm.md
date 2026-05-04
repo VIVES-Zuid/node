@@ -21,9 +21,9 @@
 
 ### Oracle Cloud (Always Free)
 
-1. Sign up at [cloud.oracle.com](https://cloud.oracle.com)
-2. Go to **Compute → Instances → Create Instance**
-3. Choose **Ubuntu 22.04** (Canonical)
+1. Mail your lecturer for an Academy invite. Do not sign up on your own because you'll need a credit card for it. 
+2. Go to https://cloud.oracle.com and then **Compute → Instances → Create Instance**
+3. Choose **Ubuntu 22.04 or 24.04** (Canonical)
 4. Shape: **VM.Standard.A1.Flex** (ARM, always free)
 5. Add your **SSH public key**
 6. Click **Create**
@@ -33,6 +33,27 @@
 ```bash
 ssh-keygen -t ed25519 -C "your@email.com"
 cat ~/.ssh/id_ed25519.pub   # copy this to Oracle
+```
+
+⚠️ Note: ssh-keygen also works on windows but not cat. You'll have to open the key in notepad to read out the content. 
+
+```cmd
+REM Windows cmd
+
+REM to copy the contents of your key. 
+type %USERPROFILE%\.ssh\id_ed25519.pub
+REM to directly copy the contents to the clipboard.
+type %USERPROFILE%\.ssh\id_rsa.pub | clip
+```
+
+```powershell
+# Windows Powershell
+
+# Display
+cat ~/.ssh/id_rsa.pub
+
+# Copy to clipboard
+Get-Content ~/.ssh/id_rsa.pub | Set-Clipboard
 ```
 
 ---
@@ -83,6 +104,9 @@ cd your-api
 npm install
 ```
 
+⚠️ If your github repository is private you will have to create ssh keys on the server too and copy the public key to your Github Account. 
+Also see "Get your SSH key (if you don't have one)" here above and https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account 
+
 ### Option B: Copy files with `scp`
 
 ```bash
@@ -124,7 +148,7 @@ npm start
    - Source: `0.0.0.0/0`
    - Port: `80, 443, 3000`
 
-### Ubuntu firewall (ufw)
+### Ubuntu firewall (ufw - OPTIONAL)
 
 ```bash
 sudo ufw allow OpenSSH

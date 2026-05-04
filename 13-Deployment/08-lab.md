@@ -98,7 +98,7 @@ curl -X POST $BASE_URL/api/auth/register \
 ### Step 1: Create Oracle Cloud VM
 
 1. Sign up at [cloud.oracle.com](https://cloud.oracle.com)
-2. Create an Ubuntu 22.04 VM (Always Free tier)
+2. Create an Ubuntu 22.04 or 24.04 VM (Always Free tier)
 3. Download your SSH key
 
 ### Step 2: Set up the server
