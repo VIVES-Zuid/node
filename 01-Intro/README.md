@@ -308,7 +308,7 @@ Your notes here...
 
 **Node.js Course** | Chapter 1  
 VIVES University of Applied Sciences  
-Dirk Hostens & Milan Dima
+Milan Dima
 
 ---
 
