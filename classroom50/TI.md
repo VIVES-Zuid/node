@@ -24,4 +24,4 @@
 
 ## Final project
 
-[Accept the final project (TI)](https://classroom50.org/VivesMDima/2627-node-ti/assignments/final-project/accept) — Official repository for your final assignment.
+[Accept the final project (TI)](https://classroom50.org/VivesMDima/2627-node-ti/assignments/final-project/accept) — Your final project: build, deploy and defend your own API.

@@ -219,6 +219,8 @@ npm test -- --test-name-pattern="^R1:"       # one requirement
 **Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
 <!-- /lab -->
 
+This deployment is also part of the [final project](../FINAL-PROJECT.md) (requirement P14).
+
 ---
 
 ## 💡 Tips

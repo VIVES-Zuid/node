@@ -19,3 +19,5 @@ Accept a lab through your group's page in [Classroom 50 invites](./classroom50/R
 | 11 | [Lab 11: Error Handling](./11-Error-Handling/05-best-practices.md) | 11-Error-Handling | [template](https://github.com/MilanVives/node-lab-11-error-handling) |
 | 12 | [Lab 12: Testing](./12-Testing/08-lab.md) | 12-Testing | [template](https://github.com/MilanVives/node-lab-12-testing) |
 | 13 | [Lab 13: Deployment](./13-Deployment/08-lab.md) | 13-Deployment | [template](https://github.com/MilanVives/node-lab-13-deployment) |
+
+After the labs: the [Final project](./FINAL-PROJECT.md). Your final grade is your project score multiplied by how well you master your own code in the oral defense.

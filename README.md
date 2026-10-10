@@ -224,7 +224,11 @@ Recommended VS Code extensions: ESLint, Prettier, REST Client, MongoDB for VS Co
 
 ## Evaluation
 
-100% project + oral defense. See **Toledo** for the detailed grading criteria and project requirements.
+Your grade is based on the [final project](./FINAL-PROJECT.md): your project score multiplied by how well you master your own code in the oral defense.
+
+> **A good project you cannot explain is a failed project.**
+
+The labs give feedback but do not count towards the grade.
 
 ---
 
