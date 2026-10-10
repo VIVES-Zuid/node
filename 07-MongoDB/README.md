@@ -200,6 +200,6 @@ Ready to master MongoDB?
 
 <div style="text-align: center; padding: 20px; color: #666;">
 
-[🏠 Course Home](../README.md) | [← Previous: Chapter 6](../06-Async-JS/README.md) | [Next Chapter: Data Validation →](../08-Data-Validation/README.md)
+[🏠 Course Home](../README.md) | [← Previous: Chapter 6](../06-Async-JS/README.md) | [Next Chapter: Data Validation →](../08-Data-Validation/01-introduction.md)
 
 </div>

@@ -13,7 +13,7 @@
 
 ### Prerequisites
 
-- **Starter Code**: Available on GitHub Classroom (see Toledo Ch8-Starter)
+- **Starter Code**: the starter of [Lab 08](./10-lab.md) (accept it via your group's page in [Classroom 50 invites](../classroom50/README.md))
 - **Focus**: Genres route migration
 - **Database**: MongoDB with Mongoose
 

@@ -264,7 +264,7 @@ graph TD
 
 <div style="background-color: #fff3e0; padding: 25px; border-radius: 10px; border-left: 5px solid #ff9800;">
 
-### Exercise
+### Practice (not graded)
 
 Create a file and experiment with the module object:
 

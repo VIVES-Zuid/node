@@ -17,7 +17,7 @@ This course is shared by three programmes:
 | **ACS** | Applied Computer Science (international Erasmus students) |
 | **AO** | Afstandsonderwijs (distance learning) |
 
-The course material is the same for all groups. Schedules, deadlines and any group-specific arrangements are published on **Toledo**.
+The course material is the same for all groups. Each group has its own Classroom 50 classroom for the labs: see [Classroom 50 invites](./classroom50/README.md). Schedules, deadlines and any group-specific arrangements are published on **Toledo**.
 
 ---
 
@@ -124,7 +124,7 @@ Referencing vs embedding, hybrid approaches, subdocuments and transactions.
 - [08 - Transactions](./09-Mongoose-Modeling/08-transactions.md)
 - [09 - Recap](./09-Mongoose-Modeling/09-recap.md)
 - [10 - Lab: Movie Review Database](./09-Mongoose-Modeling/10-lab.md)
-- [11 - Classroom Assignment](./09-Mongoose-Modeling/11-classroom-lab.md)
+- [11 - Extra Practice](./09-Mongoose-Modeling/11-classroom-lab.md)
 
 ### [10. Authentication & Authorization](./10-Auth-And-Auth/01-intro.md)
 
@@ -192,7 +192,8 @@ graph LR
     J --> K[11. Errors] --> L[12. Testing] --> M[13. Deployment]
 ```
 
-- Complete the lab exercises at the end of the chapters.
+- Complete the lab at the end of every chapter: see the [Labs overview](./LABS.md). Labs are autograded by Classroom 50 and give you feedback per requirement.
+- Accept the labs through [Classroom 50 invites](./classroom50/README.md). Each group (TI, ACS, AO) has its own invite page; only use yours.
 - Run the code examples yourself rather than only reading them.
 - Ask course-related questions on the Toledo forum.
 

@@ -454,19 +454,36 @@ npm deprecate vives-lib "No longer maintained"
 
 ---
 
-## 📝 Assignment
+<!-- lab:lab03-npm -->
+## Lab 03: Node Package Manager
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #333;">
+Create your own npm package that uses lodash, and publish it to the npm registry.
 
-### GitHub Classroom Lab
+- **Starter template:** [MilanVives/node-lab-03-npm](https://github.com/MilanVives/node-lab-03-npm)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-Complete the Chapter 3 lab assignment:
+| Requirement | Points |
+|---|---|
+| R1: round2 rounds to two decimals with lodash | 3 |
+| R2: round0 rounds to a whole number | 2 |
+| R3: package.json describes your package | 3 |
+| R4: node_modules is not committed | 2 |
 
-🔗 **See Toledo for the GitHub Classroom link (Les 3)**
+The README in your repository explains every requirement in detail.
 
-Practice creating, publishing, and using npm packages!
+**Work locally**
 
-</div>
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
+
 
 ---
 

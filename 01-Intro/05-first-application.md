@@ -221,149 +221,34 @@ sayHello('Vives');
 
 ---
 
-## 📚 Lab Exercise
+<!-- lab:lab01-first-app -->
+## Lab 01: First Application
 
-<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 15px; color: white;">
+Write your first Node.js program: assign students to one of seven groups based on their date of birth.
 
-### 🎯 Student Group Assignment
+- **Starter template:** [MilanVives/node-lab-01-first-app](https://github.com/MilanVives/node-lab-01-first-app)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-**Task:** Write a program that divides students into 7 different groups based on their date of birth.
+| Requirement | Points |
+|---|---|
+| R1: groups.js prints the group for a date of birth | 4 |
+| R2: groups.js prints the quote of the day for that group | 3 |
+| R3: groups.js rejects an invalid date of birth | 3 |
 
-**Download:** Get the starter code from **GitHub Classroom** (link on Toledo)
+The README in your repository explains every requirement in detail.
 
-</div>
-
----
-
-### 📋 Lab Requirements
-
-<div style="background-color: #f5f5f5; padding: 25px; border-radius: 10px;">
-
-#### ✅ Basic Version
-
-Create `groepen.js`:
-
-```javascript
-// Hardcoded date of birth
-const dateOfBirth = 20201010; // YYYYMMDD format
-
-// Calculate group number (0-6) using modulus
-const groupNumber = dateOfBirth % 7;
-
-console.log(`You are assigned to group ${groupNumber}`);
-```
-
-**Expected Output:**
-```bash
-milan@first-app〽 node groepen.js
-You are assigned to group 5
-```
-
-</div>
-
----
-
-### 🌟 Extra 1: User Input
-
-<div style="background-color: #e3f2fd; padding: 25px; border-radius: 10px;">
-
-Make the program **interactive** by asking for user input:
-
-```javascript
-// Import readline module for user input
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-// Ask for user input
-rl.question('Insert date of birth (YYYYMMDD): ', (dateOfBirth) => {
-    const groupNumber = dateOfBirth % 7;
-    console.log(`You are assigned to group ${groupNumber}`);
-    rl.close();
-});
-```
-
-**Expected Output:**
-```bash
-milan@first-app〽 node groepen.js
-Insert date of birth (YYYYMMDD): 20201010
-You are assigned to group 5
-milan@first-app〽
-```
-
-</div>
-
----
-
-### 🎨 Extra 2: Switch Statement with Quotes
-
-<div style="background-color: #fff3e0; padding: 25px; border-radius: 10px;">
-
-Add a **quote of the day** based on the group number:
-
-```javascript
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-rl.question('Insert date of birth (YYYYMMDD): ', (dateOfBirth) => {
-    const groupNumber = dateOfBirth % 7;
-    console.log(`You are assigned to group ${groupNumber}`);
-    console.log('Your quote of the day is:');
-    
-    switch(groupNumber) {
-        case 0:
-            console.log('Lorem ipsum dolor sit amet...');
-            break;
-        case 1:
-            console.log('Consectetur adipiscing elit...');
-            break;
-        case 2:
-            console.log('Sed do eiusmod tempor incididunt...');
-            break;
-        case 3:
-            console.log('Ut labore et dolore magna aliqua...');
-            break;
-        case 4:
-            console.log('Duis aute irure dolor in reprehenderit...');
-            break;
-        case 5:
-            console.log('Sed ut perspiciatis unde omnis iste natus error...');
-            break;
-        case 6:
-            console.log('Nemo enim ipsam voluptatem...');
-            break;
-        default:
-            console.log('No quote available');
-    }
-    
-    rl.close();
-});
-```
-
-</div>
-
----
-
-### 📤 Expected Output (Extra 2)
+**Work locally**
 
 ```bash
-milan@first-app〽 node groepen-switch.js
-Insert date of birth (YYYYMMDD): 20201010
-You are assigned to group 5
-Your quote of the day is:
-Sed ut perspiciatis unde omnis iste natus error sit
-voluptatem accusantium doloremque laudantium, totam rem
-aperiam, eaque ipsa quae ab illo inventore veritatis et
-quasi architecto beatae vitae dicta sunt explicabo.
-milan@first-app〽
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
 ```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
 ---
 

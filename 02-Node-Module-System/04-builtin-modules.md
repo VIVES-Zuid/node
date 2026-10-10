@@ -260,7 +260,7 @@ milan@les2〽
 
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 15px; color: white;">
 
-### Exercise
+### Practice (not graded)
 
 1. Use `os` module to get system info
 2. Use `path` module to parse a file path

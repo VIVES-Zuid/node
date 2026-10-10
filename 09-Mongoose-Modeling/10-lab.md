@@ -24,6 +24,40 @@ graph LR
 
 ---
 
+<!-- lab:lab09-modeling -->
+## Lab 09: Mongoose Modeling
+
+Model a movie review database with embedded documents and work with arrays of subdocuments.
+
+- **Starter template:** [MilanVives/node-lab-09-modeling](https://github.com/MilanVives/node-lab-09-modeling)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
+
+| Requirement | Points |
+|---|---|
+| R1: createMovie saves a movie with an embedded review | 2 |
+| R2: addReview adds a review to a movie | 2 |
+| R3: updateReview changes one review | 2 |
+| R4: removeReview deletes one review | 1 |
+| R5: getTopRated finds movies with a 5-star review | 2 |
+| R6: getAverageRating computes the average rating | 1 |
+
+The README in your repository explains every requirement in detail.
+
+**Work locally**
+
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
+
+---
+
 ## 📋 Given Schema
 
 Start with this — **do not change the schemas**, only implement the functions below.
@@ -224,4 +258,4 @@ console.log(`Average rating: ${avg.toFixed(1)}`);
 
 ---
 
-[← Previous: Recap](09-recap.md) | [🏠 Home](../README.md) | [Next Chapter: Github Classroom Lab →](./11-classroom-lab.md)
+[← Previous: Recap](09-recap.md) | [🏠 Home](../README.md) | [Next: Extra Practice →](./11-classroom-lab.md)

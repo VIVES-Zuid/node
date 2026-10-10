@@ -565,17 +565,38 @@ module.exports = app;
 
 ---
 
-## 🧪 Lab Exercise
+<!-- lab:lab11-error-handling -->
+## Lab 11: Error Handling
 
-Build a complete error handling system:
-1. Custom error class hierarchy
-2. Express error middleware
-3. Structured logging
-4. Input validation
-5. Retry logic for external API calls
-6. Circuit breaker implementation
-7. Error monitoring integration
-8. Unit tests for error scenarios
+Replace ad-hoc error responses in the Vivesbib API with custom error classes and central error-handling middleware.
+
+This lab continues where lab10-auth ended; the starter contains a working version of that lab.
+
+- **Starter template:** [MilanVives/node-lab-11-error-handling](https://github.com/MilanVives/node-lab-11-error-handling)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
+
+| Requirement | Points |
+|---|---|
+| R1: Custom error classes | 2 |
+| R2: asyncHandler forwards errors to Express | 2 |
+| R3: The error middleware sends JSON errors | 2 |
+| R4: Unknown routes return a JSON 404 | 2 |
+| R5: The genres routes use the error classes | 2 |
+
+The README in your repository explains every requirement in detail.
+
+**Work locally**
+
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
 ---
 

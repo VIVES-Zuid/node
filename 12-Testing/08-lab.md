@@ -16,35 +16,38 @@ Build and test a complete Todo API with:
 
 ---
 
-## 📦 Lab Setup
+<!-- lab:lab12-testing -->
+## Lab 12: Testing
 
-### 1. Create Project
+Write unit and integration tests for a Todo API with the Node.js test runner.
+
+- **Starter template:** [MilanVives/node-lab-12-testing](https://github.com/MilanVives/node-lab-12-testing)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
+
+| Requirement | Points |
+|---|---|
+| R1: Your test suite passes | 2 |
+| R2: Your tests cover at least 80% of the lines | 3 |
+| R3: Your tests catch a bug in the Todo model | 2 |
+| R4: Your tests catch a bug in the TodoService | 1 |
+| R5: Your tests catch a bug in the routes | 2 |
+
+The README in your repository explains every requirement in detail.
+
+**Work locally**
 
 ```bash
-mkdir todo-api-testing
-cd todo-api-testing
-npm init -y
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
 ```
 
-### 2. Install Dependencies
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
 
-```bash
-npm install express
-```
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
-### 3. Update package.json
-
-```json
-{
-  "type": "module",
-  "scripts": {
-    "start": "node src/server.js",
-    "test": "node --test",
-    "test:watch": "node --test --watch",
-    "test:coverage": "node --test --experimental-test-coverage"
-  }
-}
-```
+The template already contains the Todo API below and a `package.json` with the scripts `test` and `test:coverage`. The rest of this page walks through the code and the tests you write.
 
 ---
 

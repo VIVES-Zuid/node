@@ -187,14 +187,37 @@ sudo nginx -t && sudo systemctl reload nginx
 
 ---
 
-## 📊 Deliverables
+<!-- lab:lab13-deployment -->
+## Lab 13: Deployment
 
-Submit the following:
+Deploy the Vivesbib API to a hosting platform and prove that it runs.
 
-1. ✅ **Live API URL** — accessible from the internet
-2. ✅ **Screenshot** of your health check response (`/health`)
-3. ✅ **Screenshot** of at least one authenticated request working
-4. ✅ **Brief explanation** (max 5 lines) of which platform you chose and why
+This lab continues where lab11-error-handling ended; the starter contains a working version of that lab.
+
+- **Starter template:** [MilanVives/node-lab-13-deployment](https://github.com/MilanVives/node-lab-13-deployment)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
+
+| Requirement | Points |
+|---|---|
+| R1: GET /health reports that the app is running | 2 |
+| R2: DEPLOY_URL.txt contains the URL of your deployed app | 2 |
+| R3: The deployed app answers /health | 4 |
+| R4: The deployed app serves the genres | 2 |
+
+The README in your repository explains every requirement in detail.
+
+**Work locally**
+
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
 ---
 

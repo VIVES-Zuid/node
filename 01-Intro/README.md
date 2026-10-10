@@ -154,7 +154,7 @@ The chapter includes practical exercises:
 3. **User Input** - Make the program interactive
 4. **Switch Statements** - Add quotes based on group number
 
-📦 **Get Started:** Download from GitHub Classroom (link on Toledo)
+**Get started:** accept Lab 01 via your group's page in [Classroom 50 invites](../classroom50/README.md).
 
 </div>
 

@@ -301,7 +301,7 @@ graph TD
 
 ---
 
-## 🧪 Practice Exercise
+## Practice (not graded)
 
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 15px; color: white;">
 

@@ -373,19 +373,41 @@ app.use(logger);
 
 ---
 
-## 📝 Assignment
+<!-- lab:lab05-middleware -->
+## Lab 05: Middleware
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #1a1a1a;">
+Add middleware, configuration and templating to the Vivesbib API and split it into route modules.
 
-### GitHub Classroom Lab
+This lab continues where lab04-express-api ended; the starter contains a working version of that lab.
 
-Complete the Chapter 5 lab assignment:
+- **Starter template:** [MilanVives/node-lab-05-middleware](https://github.com/MilanVives/node-lab-05-middleware)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-🔗 **See Toledo for the GitHub Classroom link (Chapter 5)**
+| Requirement | Points |
+|---|---|
+| R1: A custom logger middleware runs on every request | 2 |
+| R2: Genres can be created from form data | 1 |
+| R3: morgan logs only in development | 2 |
+| R4: Static files are served from public/ | 1 |
+| R5: Configuration comes from the config package | 2 |
+| R6: The homepage is rendered with pug | 1 |
+| R7: Routes live in src/routes | 1 |
 
-Practice organizing an Express application!
+The README in your repository explains every requirement in detail.
 
-</div>
+**Work locally**
+
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
+
 
 ---
 

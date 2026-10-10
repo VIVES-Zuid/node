@@ -308,19 +308,36 @@ In the next chapters, we'll use **Express.js**, which builds on top of the `http
 
 ---
 
-## 📝 Assignment
+<!-- lab:lab02-modules -->
+## Lab 02: Node Module System
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px;">
+Practice the module system: write your own modules, use EventEmitter and build an HTTP server with built-in modules.
 
-### GitHub Classroom Lab
+- **Starter template:** [MilanVives/node-lab-02-modules](https://github.com/MilanVives/node-lab-02-modules)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-Complete the Chapter 2 lab assignment:
+| Requirement | Points |
+|---|---|
+| R1: calculator.js exports the four operations | 2 |
+| R2: printer.js emits stringConverted | 3 |
+| R3: webserver.js answers / and unknown routes | 2 |
+| R4: webserver.js reports the server status | 3 |
 
-🔗 **See Toledo for the GitHub Classroom link**
+The README in your repository explains every requirement in detail.
 
-Practice everything you've learned about modules!
+**Work locally**
 
-</div>
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
+
 
 ---
 

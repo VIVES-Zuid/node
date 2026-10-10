@@ -91,15 +91,47 @@ git push origin main
 
 ---
 
-### 🎓 Classroom 50
+## Working with Classroom 50
 
-We'll be using ** Classroom 50** for assignments and labs throughout this course.
+Every chapter ends with a lab. We use **Classroom 50** to hand out the labs and to grade them automatically. Labs give you feedback; they do not count towards your grade.
 
-```
-📦 Assignment Distribution → Classroom 50
-✅ Automatic Setup → Ready to Code
-🔄 Version Control → Track Your Progress
-```
+**Your group has its own classroom.** TI, ACS and AO each have a separate classroom with separate links. Always use the page of your own group in [Classroom 50 invites](../classroom50/README.md).
+
+### Once
+
+1. Accept the email invitation to the GitHub organization **VivesMDima**. Your teacher sends it at the start of the course.
+2. Make sure Git and Node.js are installed (see [Installation & Setup](./04-installation-setup.md)).
+
+### For every lab
+
+1. Open your group's page in [Classroom 50 invites](../classroom50/README.md) and click the accept link of the lab. Classroom 50 creates your own private repository, for example `2627-node-ti-lab04-express-api-<your-username>`.
+2. Clone it and install the packages:
+
+   ```bash
+   git clone <url of your repository>
+   cd <repository>
+   npm install
+   ```
+
+3. Read the `README.md`: it describes every requirement (R1, R2, ...).
+4. Work and test locally. `npm test` runs the same checks as the autograder:
+
+   ```bash
+   npm test                                  # all requirements
+   npm test -- --test-name-pattern="^R1:"    # one requirement
+   ```
+
+5. Commit your work and submit it:
+
+   ```bash
+   git add .
+   git commit -m "Describe your change"
+   npm run submit
+   ```
+
+6. After a few minutes your result appears on the **Releases** page of your repository: your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can comment in the **Feedback** pull request.
+
+You can submit as often as you like; the latest submission counts. An overview of all labs is in [Labs](../LABS.md).
 
 ---
 

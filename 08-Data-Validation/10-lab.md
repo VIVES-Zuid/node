@@ -9,9 +9,38 @@
 
 ---
 
-## 📋 Assignment Details
+<!-- lab:lab08-validation -->
+## Lab 08: Data Validation and Persistence
 
-See **Toledo** for the complete assignment link and instructions.
+Replace the in-memory arrays of the Vivesbib API with MongoDB and add a customers API with validation.
+
+This lab continues where lab05-middleware ended; the starter contains a working version of that lab.
+
+- **Starter template:** [MilanVives/node-lab-08-validation](https://github.com/MilanVives/node-lab-08-validation)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
+
+| Requirement | Points |
+|---|---|
+| R1: The Genre model validates its data | 2 |
+| R2: GET genre endpoints read from MongoDB | 2 |
+| R3: POST /api/genres saves to MongoDB | 2 |
+| R4: PUT and DELETE genres change MongoDB | 1 |
+| R5: The customers API works with MongoDB | 3 |
+
+The README in your repository explains every requirement in detail.
+
+**Work locally**
+
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
+
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
 ---
 
@@ -195,4 +224,4 @@ Once you've completed the basic assignment:
 
 ---
 
-[← Previous: Testing](09-testing.md) | [🏠 Home](../README.md) | [Next Chapter: Mongoose Modeling →](../09-Mongoose-Modeling/01-introduction.md)
+[← Previous: Testing](09-testing.md) | [🏠 Home](../README.md) | [Next Chapter: Mongoose Modeling →](../09-Mongoose-Modeling/01-intro.md)

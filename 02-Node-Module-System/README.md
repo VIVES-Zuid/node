@@ -17,7 +17,7 @@
 
 ### 📝 Labs
 
-✅ **Complete all GitHub Classroom Labs** - Essential for understanding
+✅ **Complete the lab of every chapter** - Essential for understanding. Accept them via your group's page in [Classroom 50 invites](../classroom50/README.md).
 
 </div>
 

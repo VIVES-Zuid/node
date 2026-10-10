@@ -260,7 +260,7 @@ try {
 
 ---
 
-## 🧪 Lab Exercise
+## Practice (not graded)
 
 Create a module that:
 1. Defines custom error classes for different scenarios

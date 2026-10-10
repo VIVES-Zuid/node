@@ -408,25 +408,43 @@ async function getData() {
 
 ---
 
-## 📝 Assignment & Resources
+<!-- lab:lab06-async -->
+## Lab 06: Asynchronous JavaScript
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #1a1a1a;">
+Rewrite callback-based code with promises and async/await.
 
-### GitHub Classroom Lab
+- **Starter template:** [MilanVives/node-lab-06-async](https://github.com/MilanVives/node-lab-06-async)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-Complete the Chapter 6 lab assignment:
+| Requirement | Points |
+|---|---|
+| R1: getCustomer returns a promise | 2 |
+| R2: getTopBooks returns a promise | 2 |
+| R3: sendEmail returns a promise | 2 |
+| R4: notifyCustomer uses async/await | 3 |
+| R5: notifyCustomer skips customers who are not gold | 1 |
 
-🔗 **See Toledo for the GitHub Classroom link (Chapter 6)**
+The README in your repository explains every requirement in detail.
 
-**Task:** Rewrite callbacks using Promises and Async/Await
+**Work locally**
 
-### Complete Code Repository
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
 
-📦 [https://github.com/MilanVives/NodeLes6.git](https://github.com/MilanVives/NodeLes6.git)
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
 
-Practice converting callbacks → promises → async/await!
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
-</div>
+---
+
+## Code from the Lessons
+
+[MilanVives/NodeLes6](https://github.com/MilanVives/NodeLes6): practice converting callbacks to promises to async/await.
+
 
 ---
 

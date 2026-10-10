@@ -454,7 +454,7 @@ try {
 
 ---
 
-## 🧪 Lab Exercise
+## Practice (not graded)
 
 Build an Express API with:
 1. Custom error classes hierarchy

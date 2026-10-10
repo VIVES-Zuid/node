@@ -396,7 +396,7 @@ app.get('/api/users/:id', async (req, res, next) => {
 
 ---
 
-## 🧪 Lab Exercise
+## Practice (not graded)
 
 Create an async application that:
 1. Reads multiple files in parallel

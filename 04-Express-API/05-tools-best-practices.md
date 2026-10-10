@@ -183,27 +183,37 @@ const port = process.env.PORT || 3000;
 
 ---
 
-## 🧪 Vivesbib API Lab
+<!-- lab:lab04-express-api -->
+## Lab 04: Express API
 
-<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 15px; color: white;">
+Build the first version of the Vivesbib API: CRUD endpoints for book genres with input validation.
 
-### Build Your First Real API
+- **Starter template:** [MilanVives/node-lab-04-express-api](https://github.com/MilanVives/node-lab-04-express-api)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-**Assignment:** Create an endpoint for book genres
+| Requirement | Points |
+|---|---|
+| R1: GET /api/genres returns all genres | 2 |
+| R2: GET /api/genres/:id returns one genre | 2 |
+| R3: POST /api/genres creates a genre | 2 |
+| R4: POST /api/genres validates the input | 2 |
+| R5: PUT /api/genres/:id updates a genre | 1 |
+| R6: DELETE /api/genres/:id deletes a genre | 1 |
 
-**URL:** `https://bib.vivesapp.be/api/genres`
+The README in your repository explains every requirement in detail.
 
-**Your Task:**
-1. Create a new Express project
-2. Set up routes for book genres
-3. Implement GET, POST, PUT, DELETE
-4. Add input validation
-5. Test with Postman
+**Work locally**
 
-**See:** GitHub Classroom - Lecture 4  
-**Link:** On Toledo
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
 
-</div>
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
+
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
 ---
 
@@ -345,22 +355,6 @@ const port = process.env.PORT || 3000;
 ✅ Environment variables
 
 **Next:** Learn about middleware in Express!
-
-</div>
-
----
-
-## 📝 Assignment
-
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #000;">
-
-### GitHub Classroom Lab
-
-Complete the Chapter 4 lab assignment:
-
-🔗 **See Toledo for the GitHub Classroom link (Lecture 4)**
-
-Build the Vivesbib API with book genres!
 
 </div>
 

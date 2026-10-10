@@ -391,29 +391,45 @@ async function deleteByTags(tags) {
 
 ---
 
-## 📝 Assignment & Resources
+<!-- lab:lab07-mongodb -->
+## Lab 07: MongoDB and Mongoose
 
-<div style="background-color: #fce4ec; padding: 25px; border-radius: 10px; color: #1a1a1a;">
+Query a MongoDB database with Mongoose: filtering, sorting and selecting fields.
 
-### GitHub Classroom Lab
+- **Starter template:** [MilanVives/node-lab-07-mongodb](https://github.com/MilanVives/node-lab-07-mongodb)
+- **Accept the lab:** use the link on **your own group's page** in [Classroom 50 invites](../classroom50/README.md)
 
-Complete the Chapter 7 lab assignment:
+| Requirement | Points |
+|---|---|
+| R1: The Course model has the right schema | 2 |
+| R2: getCourses1 returns the published courses sorted by name | 3 |
+| R3: getCourses2 returns frontend and backend courses by price | 3 |
+| R4: getCourses3 returns expensive courses or courses by an author | 2 |
 
-🔗 **See Toledo for the GitHub Classroom link (Chapter 7)**
+The README in your repository explains every requirement in detail.
 
-**Practice:** Create a full CRUD API with MongoDB!
+**Work locally**
 
-### Class Code Repository
+```bash
+npm install
+npm test                                     # all requirements
+npm test -- --test-name-pattern="^R1:"       # one requirement
+```
 
-📦 [https://github.com/MilanVives/NodeLes7](https://github.com/MilanVives/NodeLes7)
+**Submit:** commit your work, then run `npm run submit`. You can submit as often as you like; the latest submission counts.
 
-### Resources
+**Feedback:** after a few minutes the **Releases** page of your repository shows your score and a PASS/FAIL line per requirement with the reason for each failure. Your teacher can add comments in the **Feedback** pull request.
+<!-- /lab -->
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
+---
+
+## Code from the Lessons and Resources
+
+- [MilanVives/NodeLes7](https://github.com/MilanVives/NodeLes7): the code from the lessons
+- [MongoDB Documentation](https://www.mongodb.com/docs/)
 - [Mongoose Documentation](https://mongoosejs.com/)
-- [MongoDB University (Free Courses)](https://university.mongodb.com/)
+- [MongoDB University (free courses)](https://learn.mongodb.com/)
 
-</div>
 
 ---
 
@@ -421,6 +437,6 @@ Complete the Chapter 7 lab assignment:
 
 [🏠 Course Home](../README.md) | [📘 Chapter 7 Home](./README.md)
 
-[← Previous: Updating Documents](./05-updating-documents.md) | [Next Chapter: Data Validation →](../08-Data-Validation/README.md)
+[← Previous: Updating Documents](./05-updating-documents.md) | [Next Chapter: Data Validation →](../08-Data-Validation/01-introduction.md)
 
 </div>

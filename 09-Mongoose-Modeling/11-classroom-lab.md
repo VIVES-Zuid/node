@@ -1,6 +1,6 @@
-# 🧪 Classroom Assignment
+# Extra Practice: Referencing and Embedding (not graded)
 
-> **Practice what you've learned**
+> **Practice what you've learned.** The graded lab of this chapter is [Lab 09](./10-lab.md).
 
 ---
 
@@ -18,15 +18,9 @@ https://github.com/MilanVives/NodeVivesFiles
 
 ---
 
-## 🎯 Assignment
+## 🎯 Exercise
 
-### 📝 Task
-
-Complete the code in the application following the comments provided.
-
-### 🔗 Access
-
-Assignment link available on **Toledo**
+Complete `referencing_opl.js` and `embedding_opl.js` from the repository above, following the comments in the code.
 
 ---
 
