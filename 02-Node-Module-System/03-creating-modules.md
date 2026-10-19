@@ -99,7 +99,7 @@ console.log(logger);
 
 ```bash
 milan@les2〽 node app.js
-{ log: [Function: log], logurl: 'http://mylogger.io:log' }
+{ log: [Function: log] }
 milan@les2〽
 ```
 
